@@ -51,6 +51,14 @@ contract P1Trade is
         bytes data;
     }
 
+    struct TradeArgWithPrice {
+        uint256 takerIndex;
+        uint256 makerIndex;
+        uint256 price;
+        address trader;
+        bytes data;
+    }
+
     // ============ Events ============
 
     event LogTrade(
@@ -76,18 +84,28 @@ contract P1Trade is
      */
     function trade(
         address[] memory accounts,
-        TradeArg[] memory trades
+        TradeArg[] memory trades,
+        uint256[] memory settlementAmounts,
+        bool[] memory settlementIsPositives,
+        uint256 price // to update global index
     )
         public
         noFinalSettlement
         nonReentrant
     {
+        require(
+            _GLOBAL_OPERATORS_[msg.sender],
+            "trader is not global operator"
+        );
         _verifyAccounts(accounts);
-        P1Types.Context memory context = _loadContext();
-        P1Types.Balance[] memory initialBalances = _settleAccounts(context, accounts);
+        P1Types.Context memory context = _loadContextWithPrice(price);
+        P1Types.Balance[] memory initialBalances = _settleAccounts(context, accounts, settlementAmounts, settlementIsPositives);
         P1Types.Balance[] memory currentBalances = new P1Types.Balance[](initialBalances.length);
 
         uint256 i;
+        for (i = 0; i < accounts.length; i++) {
+            _WITHDRAW_DELAY_[accounts[i]] = 0;
+        }
         for (i = 0; i < initialBalances.length; i++) {
             currentBalances[i] = initialBalances[i].copy();
         }
@@ -139,6 +157,19 @@ contract P1Trade is
             _BALANCES_[maker] = makerBalance;
             _BALANCES_[taker] = takerBalance;
 
+            // _verifyAccountFinalBalance(
+            //     context,
+            //     accounts[tradeArg.makerIndex],
+            //     initialBalances[tradeArg.makerIndex],
+            //     currentBalances[tradeArg.makerIndex]
+            // );
+            // _verifyAccountFinalBalance(
+            //     context,
+            //     accounts[tradeArg.takerIndex],
+            //     initialBalances[tradeArg.takerIndex],
+            //     currentBalances[tradeArg.takerIndex]
+            // );
+
             emit LogTrade(
                 maker,
                 taker,
@@ -151,12 +182,12 @@ contract P1Trade is
             );
         }
 
-        _verifyAccountsFinalBalances(
-            context,
-            accounts,
-            initialBalances,
-            currentBalances
-        );
+        // _verifyAccountsFinalBalances(
+        //     context,
+        //     accounts,
+        //     initialBalances,
+        //     currentBalances
+        // );
     }
 
     /**
@@ -272,5 +303,89 @@ contract P1Trade is
                 account
             );
         }
+    }
+
+
+    /**
+     * Verify that account balances at the end of the tx are allowable given the initial balances.
+     *
+     * We require that for every account, either:
+     * 1. The account meets the collateralization requirement; OR
+     * 2. All of the following are true:
+     *   a) The absolute value of the account position has not increased;
+     *   b) The sign of the account position has not flipped positive to negative or vice-versa.
+     *   c) The account's collateralization ratio has not worsened;
+     */
+    function _verifyAccountFinalBalance(
+        P1Types.Context memory context,
+        address account,
+        P1Types.Balance memory initialBalance,
+        P1Types.Balance memory currentBalance
+    )
+        private
+        pure
+    {
+        (uint256 currentPos, uint256 currentNeg) =
+            currentBalance.getPositiveAndNegativeValue(context.price);
+
+        // See P1Settlement._isCollateralized().
+        bool isCollateralized =
+            currentPos.mul(BaseMath.base()) >= currentNeg.mul(context.minCollateral);
+
+        if (isCollateralized) {
+            return;
+        }
+
+        (uint256 initialPos, uint256 initialNeg) =
+            initialBalance.getPositiveAndNegativeValue(context.price);
+
+        Require.that(
+            currentPos != 0,
+            "account is undercollateralized and has no positive value",
+            account
+        );
+        Require.that(
+            currentBalance.position <= initialBalance.position,
+            "account is undercollateralized and absolute position size increased",
+            account
+        );
+
+        // Note that currentBalance.position can't be zero at this point since that would imply
+        // either currentPos is zero or the account is well-collateralized.
+
+        Require.that(
+            currentBalance.positionIsPositive == initialBalance.positionIsPositive,
+            "account is undercollateralized and position changed signs",
+            account
+        );
+        Require.that(
+            initialNeg != 0,
+            "account is undercollateralized and was not previously",
+            account
+        );
+
+        // Note that at this point:
+        //   Absolute position size must have decreased and not changed signs.
+        //   Initial margin/position must be one of -/-, -/+, or +/-.
+        //   Current margin/position must now be either -/+ or +/-.
+        //
+        // Which implies one of the following [intial] -> [current] configurations:
+        //   [-/-] -> [+/-]
+        //   [-/+] -> [-/+]
+        //   [+/-] -> [+/-]
+
+        // Check that collateralization increased.
+        // In the case of [-/-] initial, initialPos == 0 so the following will pass. Otherwise:
+        // at this point, either initialNeg and currentNeg represent the margin values, or
+        // initialPos and currentPos do. Since the margin is multiplied by the base value in
+        // getPositiveAndNegativeValue(), it is safe to use baseDivMul() to divide the margin
+        // without any rounding. This is important to avoid the possibility of overflow.
+        Require.that(
+            currentBalance.positionIsPositive
+                ? currentNeg.baseDivMul(initialPos) <= initialNeg.baseDivMul(currentPos)
+                : initialPos.baseDivMul(currentNeg) <= currentPos.baseDivMul(initialNeg),
+            "account is undercollateralized and collateralization decreased",
+            account
+        );
     }
 }

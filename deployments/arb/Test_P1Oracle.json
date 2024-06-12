@@ -1,0 +1,100 @@
+{
+  "address": "0x006CB7c058DFdcd5F3E006d583C580c564190c37",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_PRICE_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPrice",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xeab4b640ac2b9eb3ff8fa322a6afdb932c80462d9b39e65da75dc3df6ce556e8",
+  "receipt": {
+    "to": null,
+    "from": "0x8cA8259Ce5Af851f7E40205e656B4cE5dDBcE0d3",
+    "contractAddress": "0x006CB7c058DFdcd5F3E006d583C580c564190c37",
+    "transactionIndex": 1,
+    "gasUsed": "280280",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x0369509a24671d4a765a452d7312cf0e6cb17986b979226a9f3ff3944a36c323",
+    "transactionHash": "0xeab4b640ac2b9eb3ff8fa322a6afdb932c80462d9b39e65da75dc3df6ce556e8",
+    "logs": [],
+    "blockNumber": 25045369,
+    "cumulativeGasUsed": "280280",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "d8a4bed0d8259721c6e731840c9f1c4e",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"_PRICE_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newPrice\",\"type\":\"uint256\"}],\"name\":\"setPrice\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"axor\",\"methods\":{},\"title\":\"Test_P1Oracle\"},\"userdoc\":{\"methods\":{},\"notice\":\"I_P1Oracle implementation for testing.\"}},\"settings\":{\"compilationTarget\":{\"contracts/test/v1/Test_P1Oracle.sol\":\"Test_P1Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/protocol/v1/intf/I_P1Oracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_P1Oracle\\n * @author axor\\n *\\n * @notice Interface that PerpetualV1 Price Oracles must implement.\\n */\\ninterface I_P1Oracle {\\n\\n    /**\\n     * @notice Returns the price of the underlying asset relative to the margin token.\\n     *\\n     * @return The price as a fixed-point number with 18 decimals.\\n     */\\n    function getPrice()\\n        external\\n        view\\n        returns (uint256);\\n}\\n\",\"keccak256\":\"0xc5b4c8b57eb0b7156086eaa8ed394f72bbfa2e879ac805096a7b6cf6799b43ef\"},\"contracts/test/v1/Test_P1Oracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { I_P1Oracle } from \\\"../../protocol/v1/intf/I_P1Oracle.sol\\\";\\n\\n\\n/**\\n * @title Test_P1Oracle\\n * @author axor\\n *\\n * @notice I_P1Oracle implementation for testing.\\n */\\n/* solium-disable-next-line camelcase */\\ncontract Test_P1Oracle is\\n    I_P1Oracle\\n{\\n    uint256 public _PRICE_ = 0;\\n\\n    function getPrice()\\n        external\\n        view\\n        returns (uint256)\\n    {\\n        return _PRICE_;\\n    }\\n\\n    function setPrice(\\n        uint256 newPrice\\n    )\\n        external\\n    {\\n        _PRICE_ = newPrice;\\n    }\\n}\\n\",\"keccak256\":\"0x2d5fdeff79611df1a04e9bccd2e7d2f659d6d36ab06bd78db52f93ed8cd86bb2\"}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610128806100246000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c806391b7f5ed14604157806398d5fdca1460525780639f5cf46a14606c575b600080fd5b6050604c3660046092565b6072565b005b60586077565b6040516063919060c2565b60405180910390f35b6058607d565b600055565b60005490565b60005481565b8035608c8160d1565b92915050565b60006020828403121560a357600080fd5b600060ad84846083565b949350505050565b60bc8160ce565b82525050565b60208101608c828460b5565b90565b60d88160ce565b811460e257600080fd5b5056fea365627a7a72315820d9943d75baa6e6d7abea5c4d8a1bfe87850fac5bffbdfc06896b6ad759694a676c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c806391b7f5ed14604157806398d5fdca1460525780639f5cf46a14606c575b600080fd5b6050604c3660046092565b6072565b005b60586077565b6040516063919060c2565b60405180910390f35b6058607d565b600055565b60005490565b60005481565b8035608c8160d1565b92915050565b60006020828403121560a357600080fd5b600060ad84846083565b949350505050565b60bc8160ce565b82525050565b60208101608c828460b5565b90565b60d88160ce565b811460e257600080fd5b5056fea365627a7a72315820d9943d75baa6e6d7abea5c4d8a1bfe87850fac5bffbdfc06896b6ad759694a676c6578706572696d656e74616cf564736f6c63430005100040",
+  "devdoc": {
+    "author": "axor",
+    "methods": {},
+    "title": "Test_P1Oracle"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "I_P1Oracle implementation for testing."
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8709,
+        "contract": "contracts/test/v1/Test_P1Oracle.sol:Test_P1Oracle",
+        "label": "_PRICE_",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

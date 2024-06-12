@@ -169,6 +169,23 @@ contract P1Getters is
         return _MIN_COLLATERAL_;
     }
 
+
+    function getDelayBlock()
+        external
+        view
+        returns (uint256)
+    {
+        return _WITHDRAW_DELAY_BLOCK_;
+    }
+
+    function getUserFlag(address account)
+        external
+        view
+        returns (uint256)
+    {
+        return _WITHDRAW_DELAY_[account];
+    }
+
     /**
      * @notice Gets the status of whether final-settlement was initiated by the Admin.
      *

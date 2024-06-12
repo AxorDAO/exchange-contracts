@@ -22,7 +22,6 @@ pragma experimental ABIEncoderV2;
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import { I_PerpetualV1 } from "../intf/I_PerpetualV1.sol";
-import "hardhat/console.sol";
 
 
 /**
@@ -45,8 +44,6 @@ contract P1Proxy {
     )
         external
     {
-        console.log("===============================");
-        console.log(I_PerpetualV1(perpetual).getTokenContract());
         IERC20 tokenContract = IERC20(I_PerpetualV1(perpetual).getTokenContract());
 
         // safeApprove requires unsetting the allowance first.

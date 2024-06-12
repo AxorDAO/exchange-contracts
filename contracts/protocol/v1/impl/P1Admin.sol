@@ -145,6 +145,22 @@ contract P1Admin is
     }
 
     /**
+     * @notice Sets a new value for the number of blocks required to withdraw funds.
+     * @dev Must be called by the PerpetualV1 admin.
+     *
+     * @param  withdrawDelayBlock  The new value of the number of blocks required to withdraw funds.
+     */
+    function setWithdrawDelayBlock(
+        uint256 withdrawDelayBlock
+    )
+        external
+        onlyAdmin
+        nonReentrant
+    {
+        _WITHDRAW_DELAY_BLOCK_ = withdrawDelayBlock;
+    }
+
+    /**
      * @notice Enables final settlement if the oracle price is between the provided bounds.
      * @dev Must be called by the PerpetualV1 admin. The current result of the price oracle
      *  must be between the two bounds supplied. Emits the LogFinalSettlementEnabled event.

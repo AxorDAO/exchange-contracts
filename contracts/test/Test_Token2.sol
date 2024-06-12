@@ -32,7 +32,7 @@ import { ERC20Detailed } from "@openzeppelin/contracts/token/ERC20/ERC20Detailed
 /* solium-disable-next-line camelcase */
 contract Test_Token2 is
     ERC20,
-    ERC20Detailed("Test Token 2", "TEST2", 6)
+    ERC20Detailed("Test Token 2", "TEST2", 18)
 {
     function mint(address account, uint256 amount) external {
         _mint(account, amount);

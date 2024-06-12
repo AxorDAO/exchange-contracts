@@ -1,0 +1,99 @@
+{
+  "address": "0x231c55DFdfCDAE1456f4d184aDe1758e3dD3957A",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_ANSWER_",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "latestAnswer",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "newAnswer",
+          "type": "int256"
+        }
+      ],
+      "name": "setAnswer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x8efefb78226a26f2420369ea683a451a56ade5fe80d97aac3182b97011c420c3",
+  "receipt": {
+    "to": null,
+    "from": "0xfA8aa72aB7fc0c5a6BFc38Ff25CD4AB7bb55E1D5",
+    "contractAddress": "0x231c55DFdfCDAE1456f4d184aDe1758e3dD3957A",
+    "transactionIndex": 7,
+    "gasUsed": "119623",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xbb4d315d2bfa423a44c9033ece0fa796beca8c409a218b014ad144673d7b38cd",
+    "transactionHash": "0x8efefb78226a26f2420369ea683a451a56ade5fe80d97aac3182b97011c420c3",
+    "logs": [],
+    "blockNumber": 38765538,
+    "cumulativeGasUsed": "529614",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "d8a4bed0d8259721c6e731840c9f1c4e",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"_ANSWER_\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"int256\",\"name\":\"newAnswer\",\"type\":\"int256\"}],\"name\":\"setAnswer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"axor * Chainlink Aggregator for testing\",\"methods\":{},\"title\":\"Test_ChainlinkAggregator\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/test/external/Test_ChainlinkAggregator.sol\":\"Test_ChainlinkAggregator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/external/chainlink/I_Aggregator.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_Aggregator\\n * @author axor\\n *\\n * Partial interface for a Chainlink Aggregator.\\n */\\ninterface I_Aggregator {\\n\\n    // ============ Getter Functions ============\\n\\n    /**\\n     * @notice Get the most recent answer from the aggregator.\\n     * @dev Warning: Will return 0 if no answer has been reached.\\n     */\\n    function latestAnswer()\\n        external\\n        view\\n        returns (int256);\\n}\\n\",\"keccak256\":\"0x6dbf491dfd52b0d95e5cc34efc0a3bd7ae2db2f0a64cc6cfbc20a770aefebfb4\"},\"contracts/test/external/Test_ChainlinkAggregator.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { I_Aggregator } from \\\"../../external/chainlink/I_Aggregator.sol\\\";\\n\\n\\n/**\\n * @title Test_ChainlinkAggregator\\n * @author axor\\n *\\n * Chainlink Aggregator for testing\\n */\\n/* solium-disable-next-line camelcase */\\ncontract Test_ChainlinkAggregator is\\n    I_Aggregator\\n{\\n    int256 public _ANSWER_ = 0;\\n\\n    // ============ Test Data Setter Functions ============\\n\\n    function setAnswer(\\n        int256 newAnswer\\n    )\\n        external\\n    {\\n        _ANSWER_ = newAnswer;\\n    }\\n\\n    // ============ Getter Functions ============\\n\\n    function latestAnswer()\\n        external\\n        view\\n        returns (int256)\\n    {\\n        return _ANSWER_;\\n    }\\n}\\n\",\"keccak256\":\"0x71c65e3ba9d3e4a5fe7e3c4b89561c61ff34dad8878659e25a30a164e3ae8fb0\"}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610128806100246000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c80633ad12a2214604157806350d25bcd14605b57806399213cd8146061575b600080fd5b60476072565b6040516052919060c2565b60405180910390f35b60476078565b6070606c3660046092565b607e565b005b60005481565b60005490565b600055565b8035608c8160d1565b92915050565b60006020828403121560a357600080fd5b600060ad84846083565b949350505050565b60bc8160ce565b82525050565b60208101608c828460b5565b90565b60d88160ce565b811460e257600080fd5b5056fea365627a7a723158204d6c9d0c1593cf7d3f95afc7cfe964354f03d5904d92816ddfad6809165725a76c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c80633ad12a2214604157806350d25bcd14605b57806399213cd8146061575b600080fd5b60476072565b6040516052919060c2565b60405180910390f35b60476078565b6070606c3660046092565b607e565b005b60005481565b60005490565b600055565b8035608c8160d1565b92915050565b60006020828403121560a357600080fd5b600060ad84846083565b949350505050565b60bc8160ce565b82525050565b60208101608c828460b5565b90565b60d88160ce565b811460e257600080fd5b5056fea365627a7a723158204d6c9d0c1593cf7d3f95afc7cfe964354f03d5904d92816ddfad6809165725a76c6578706572696d656e74616cf564736f6c63430005100040",
+  "devdoc": {
+    "author": "axor * Chainlink Aggregator for testing",
+    "methods": {},
+    "title": "Test_ChainlinkAggregator"
+  },
+  "userdoc": {
+    "methods": {}
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8317,
+        "contract": "contracts/test/external/Test_ChainlinkAggregator.sol:Test_ChainlinkAggregator",
+        "label": "_ANSWER_",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_int256"
+      }
+    ],
+    "types": {
+      "t_int256": {
+        "encoding": "inplace",
+        "label": "int256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

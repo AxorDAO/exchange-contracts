@@ -52,9 +52,9 @@ async function init(ctx: ITestContext): Promise<void> {
   // +-----------+-----------+-----------+-------------------+
   await Promise.all([
     ctx.perpetual.testing.oracle.setPrice(initialPrice),
-    mintAndDeposit(ctx, long, '1000e18'),
-    mintAndDeposit(ctx, short, '2000e18'),
-    mintAndDeposit(ctx, neutral, '3000e18'),
+    // mintAndDeposit(ctx, long, long, '1000e18', initialPrice.toSolidity(), 0, true),
+    // mintAndDeposit(ctx, short, short, '2000e18', initialPrice.toSolidity(), 0, true),
+    // mintAndDeposit(ctx, neutral, neutral, '3000e18', initialPrice.toSolidity(), 0, true),
   ]);
 
   await ctx.perpetual.fundingOracle.setFundingRateProvider(
@@ -73,10 +73,10 @@ perpetualDescribe('Integration testing', init, (ctx: ITestContext) => {
     // to depend upon the frequency of updates to the index.
 
     // Fast forward so that the speed limit on changes to funding rate does not take effect.
-    await fastForward(INTEGERS.ONE_HOUR_IN_SECONDS.toNumber());
+    // await fastForward(INTEGERS.ONE_HOUR_IN_SECONDS.toNumber());
 
     // Update global index before setting the funding rate, to minimize final error.
-    await ctx.perpetual.margin.deposit(admin, 0);
+    await ctx.perpetual.margin.deposit(admin, admin, 0, initialPrice.toSolidity(), 0, true);
 
     // Suppose the perpetual market is initially trading above the oracle price.
     // Then the funding rate is likely to be positive, indicating that longs pay shorts.
@@ -88,7 +88,7 @@ perpetualDescribe('Integration testing', init, (ctx: ITestContext) => {
     // Suppose that the contract is interacted with once an hour.
     for (let i = 0; i < 24; i += 1) {
       await fastForward(INTEGERS.ONE_HOUR_IN_SECONDS.toNumber());
-      await ctx.perpetual.margin.deposit(admin, 0);
+      await ctx.perpetual.margin.deposit(admin, admin, 0, initialPrice.toSolidity(), 0, true);
     }
 
     // Calculate the effective 8-hour rate.
@@ -161,7 +161,7 @@ perpetualDescribe('Integration testing', init, (ctx: ITestContext) => {
     initialMargin: BigNumber,
   ): Promise<BigNumber> {
     // Settle the account.
-    await ctx.perpetual.margin.deposit(account, 0);
+    await ctx.perpetual.margin.deposit(admin, admin, 0, initialPrice.toSolidity(), 0, true);
 
     const balance = await ctx.perpetual.getters.getAccountBalance(account);
     const interestPaid = balance.margin.minus(initialMargin);

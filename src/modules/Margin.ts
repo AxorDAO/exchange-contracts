@@ -39,15 +39,31 @@ export class Margin {
 
   // ============ Senders ============
 
+
+  // address from,
+  //       address account,
+  //       uint256 amount,
+  //       uint256 price,
+  //       uint256 settlementAmounts,
+  //       bool settlementIsPositives
+
   public async deposit(
+    from: address,
     account: address,
     amount: BigNumberable,
+    price: BigNumberable,
+    settlementAmounts: BigNumberable,
+    settlementIsPositives: boolean,
     options?: SendOptions,
   ): Promise<TxResult> {
     return this.contracts.send(
       this.perpetual.methods.deposit(
+        from,
         account,
         new BigNumber(amount).toFixed(0),
+        new BigNumber(price).toFixed(0),
+        new BigNumber(settlementAmounts).toFixed(0),
+        settlementIsPositives,
       ),
       options,
     );

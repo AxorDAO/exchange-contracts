@@ -8,7 +8,7 @@ const UNLOCK_IN_X_DAYS = NOW_IN_SECONDS + DAY_IN_SECONDS * 1; // 1 DAY
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
-  const lockedAmount = hre.ethers.parseEther("0.01").toString();
+  // const lockedAmount = hre.ethers.parseEther("0.01").toString();
 
   const Test_Lib = await deploy("Test_Lib", {
     from: deployer,
@@ -58,11 +58,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     args: [],
     log: true,
   });
-  const WETH9 = await deploy("WETH9", {
-    from: deployer,
-    args: [],
-    log: true,
-  });
+  // const WETH9 = await deploy("WETH9", {
+  //   from: deployer,
+  //   args: [],
+  //   log: true,
+  // });
   console.log("contract address for Test_Lib", Test_Lib.address);
   console.log("contract address for Test_P1Funder", Test_P1Funder.address);
   console.log("contract address for Test_P1Monolith", Test_P1Monolith.address);
@@ -72,8 +72,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   console.log("contract address for Test_Token", Test_Token.address);
   console.log("contract address for Test_MakerOracle", Test_MakerOracle.address);
   console.log("contract address for Test_ChainlinkAggregator", Test_ChainlinkAggregator.address);
-  console.log("contract address for WETH9", WETH9.address);
+  // console.log("contract address for WETH9", WETH9.address);
 };
 export default func;
-func.id = "deploy_lock"; // id required to prevent reexecution
-func.tags = ["Lock"];
+func.id = "init"; // id required to prevent reexecution
+func.tags = ["init"];

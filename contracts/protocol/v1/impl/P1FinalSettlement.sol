@@ -92,7 +92,7 @@ contract P1FinalSettlement is
         });
 
         // Apply funding changes.
-        P1Types.Balance memory balance = _settleAccount(context, msg.sender);
+        (P1Types.Balance memory balance,,) = _settleAccountWhenUserForceWithdraw(context, msg.sender);
 
         // Determine the account net value.
         // `positive` and `negative` are base values with extra precision.

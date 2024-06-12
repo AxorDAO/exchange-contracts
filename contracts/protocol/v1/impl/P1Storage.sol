@@ -38,6 +38,7 @@ contract P1Storage is
     mapping(address => P1Types.Index) internal _LOCAL_INDEXES_;
 
     mapping(address => bool) internal _GLOBAL_OPERATORS_;
+    mapping(address => uint256) internal _WITHDRAW_DELAY_;
     mapping(address => mapping(address => bool)) internal _LOCAL_OPERATORS_;
 
     address internal _TOKEN_;
@@ -49,4 +50,5 @@ contract P1Storage is
 
     bool internal _FINAL_SETTLEMENT_ENABLED_;
     uint256 internal _FINAL_SETTLEMENT_PRICE_;
+    uint256 internal _WITHDRAW_DELAY_BLOCK_;
 }

@@ -1,0 +1,447 @@
+{
+  "address": "0x1d15362a036d46DA999d8F10d8d60F2454196282",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "fundingRateProvider",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "fundingRateProvider",
+          "type": "address"
+        }
+      ],
+      "name": "LogFundingRateProviderSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "fundingRate",
+          "type": "bytes32"
+        }
+      ],
+      "name": "LogFundingRateUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_ABS_DIFF_PER_SECOND",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_ABS_VALUE",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_FUNDING_RATE_PROVIDER_",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "timeDelta",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFunding",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isPositive",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct SignedMath.Int",
+          "name": "newRate",
+          "type": "tuple"
+        }
+      ],
+      "name": "setFundingRate",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint32",
+              "name": "timestamp",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bool",
+              "name": "isPositive",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint128",
+              "name": "value",
+              "type": "uint128"
+            }
+          ],
+          "internalType": "struct P1Types.Index",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newProvider",
+          "type": "address"
+        }
+      ],
+      "name": "setFundingRateProvider",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xbd5804ea5bff98cc89c797a7d2f0dc4ab92c2b9a713da7ad9b0d07c8d93c68cf",
+  "receipt": {
+    "to": null,
+    "from": "0xC17278db94dc180d8B7680656cBe3051517ae6e8",
+    "contractAddress": "0x1d15362a036d46DA999d8F10d8d60F2454196282",
+    "transactionIndex": 1,
+    "gasUsed": "2115338",
+    "logsBloom": "0x00000000000000000002000000000000000000000000000000800000000000000000000000000008000000000000100000000000000004000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000400000800000000000000000000010000000000400000000000000000000040100000000000000000000000000000000000000000080000000000000000000000000000000400000000000000000000000000000000001000000000000000000800000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x5895c6afd34289d1c71ee8cf6688b087eb61ffd5e4af5917ac588f7822a29e50",
+    "transactionHash": "0xbd5804ea5bff98cc89c797a7d2f0dc4ab92c2b9a713da7ad9b0d07c8d93c68cf",
+    "logs": [
+      {
+        "transactionIndex": 1,
+        "blockNumber": 25055107,
+        "transactionHash": "0xbd5804ea5bff98cc89c797a7d2f0dc4ab92c2b9a713da7ad9b0d07c8d93c68cf",
+        "address": "0x1d15362a036d46DA999d8F10d8d60F2454196282",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000c17278db94dc180d8b7680656cbe3051517ae6e8"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0x5895c6afd34289d1c71ee8cf6688b087eb61ffd5e4af5917ac588f7822a29e50"
+      },
+      {
+        "transactionIndex": 1,
+        "blockNumber": 25055107,
+        "transactionHash": "0xbd5804ea5bff98cc89c797a7d2f0dc4ab92c2b9a713da7ad9b0d07c8d93c68cf",
+        "address": "0x1d15362a036d46DA999d8F10d8d60F2454196282",
+        "topics": [
+          "0x2ebf65220b5046a8d9cff102710ef15de0a0bf3709dcc11c3af50abe472e1c22"
+        ],
+        "data": "0x000000000000000000000065faaaca0100000000000000000000000000000000",
+        "logIndex": 1,
+        "blockHash": "0x5895c6afd34289d1c71ee8cf6688b087eb61ffd5e4af5917ac588f7822a29e50"
+      },
+      {
+        "transactionIndex": 1,
+        "blockNumber": 25055107,
+        "transactionHash": "0xbd5804ea5bff98cc89c797a7d2f0dc4ab92c2b9a713da7ad9b0d07c8d93c68cf",
+        "address": "0x1d15362a036d46DA999d8F10d8d60F2454196282",
+        "topics": [
+          "0x232d43841005a98dbf929d234a7a8d2c4c570becee067c9c81bcd4e0acd0ab92"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "logIndex": 2,
+        "blockHash": "0x5895c6afd34289d1c71ee8cf6688b087eb61ffd5e4af5917ac588f7822a29e50"
+      }
+    ],
+    "blockNumber": 25055107,
+    "cumulativeGasUsed": "2115338",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x0000000000000000000000000000000000000000"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "d8a4bed0d8259721c6e731840c9f1c4e",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"fundingRateProvider\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"fundingRateProvider\",\"type\":\"address\"}],\"name\":\"LogFundingRateProviderSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"fundingRate\",\"type\":\"bytes32\"}],\"name\":\"LogFundingRateUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_ABS_DIFF_PER_SECOND\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_ABS_VALUE\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_FUNDING_RATE_PROVIDER_\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"timeDelta\",\"type\":\"uint256\"}],\"name\":\"getFunding\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isPositive\",\"type\":\"bool\"}],\"internalType\":\"struct SignedMath.Int\",\"name\":\"newRate\",\"type\":\"tuple\"}],\"name\":\"setFundingRate\",\"outputs\":[{\"components\":[{\"internalType\":\"uint32\",\"name\":\"timestamp\",\"type\":\"uint32\"},{\"internalType\":\"bool\",\"name\":\"isPositive\",\"type\":\"bool\"},{\"internalType\":\"uint128\",\"name\":\"value\",\"type\":\"uint128\"}],\"internalType\":\"struct P1Types.Index\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newProvider\",\"type\":\"address\"}],\"name\":\"setFundingRateProvider\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"axor\",\"methods\":{\"getFunding(uint256)\":{\"params\":{\"timeDelta\":\"Number of seconds over which to calculate the accumulated funding amount.\"},\"return\":\"True if the funding rate is positive, and false otherwise.The funding amount as a unitless rate, represented as a fixed-point number                   with 18 decimals.\"},\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setFundingRate((uint256,bool))\":{\"details\":\"Can only be called by the funding rate provider. Emits the LogFundingRateUpdated event.\",\"params\":{\"newRate\":\"The intended new funding rate. Is bounded by the global constant bounds.\"},\"return\":\"The new funding rate with a timestamp of the update.\"},\"setFundingRateProvider(address)\":{\"details\":\"Emits the LogFundingRateProviderSet event.\",\"params\":{\"newProvider\":\"The new provider, who will have the ability to set the funding rate.\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"P1FundingOracle\"},\"userdoc\":{\"methods\":{\"getFunding(uint256)\":{\"notice\":\"Calculates the signed funding amount that has accumulated over a period of time.\"},\"setFundingRate((uint256,bool))\":{\"notice\":\"Set the funding rate, denoted in units per second, fixed-point with 18 decimals.\"},\"setFundingRateProvider(address)\":{\"notice\":\"Set the funding rate provider. Can only be called by the admin.\"}},\"notice\":\"Oracle providing the funding rate for a perpetual market.\"}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/v1/oracles/P1FundingOracle.sol\":\"P1FundingOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/GSN/Context.sol\":{\"content\":\"pragma solidity ^0.5.0;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\ncontract Context {\\n    // Empty internal constructor, to prevent people from mistakenly deploying\\n    // an instance of this contract, which should be used via inheritance.\\n    constructor () internal { }\\n    // solhint-disable-previous-line no-empty-blocks\\n\\n    function _msgSender() internal view returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\"},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"content\":\"pragma solidity ^0.5.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return sub(a, b, \\\"SafeMath: subtraction overflow\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     *\\n     * _Available since v2.4.0._\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        uint256 c = a - b;\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) {\\n            return 0;\\n        }\\n\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return div(a, b, \\\"SafeMath: division by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     *\\n     * _Available since v2.4.0._\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        // Solidity only automatically asserts when dividing by 0\\n        require(b > 0, errorMessage);\\n        uint256 c = a / b;\\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return mod(a, b, \\\"SafeMath: modulo by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts with custom message when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     *\\n     * _Available since v2.4.0._\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b != 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\"},\"@openzeppelin/contracts/ownership/Ownable.sol\":{\"content\":\"pragma solidity ^0.5.0;\\n\\nimport \\\"../GSN/Context.sol\\\";\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\ncontract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor () internal {\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(isOwner(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns true if the caller is the current owner.\\n     */\\n    function isOwner() public view returns (bool) {\\n        return _msgSender() == _owner;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public onlyOwner {\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     */\\n    function _transferOwnership(address newOwner) internal {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0x6fb9d7889769d7cc161225f9ef7a90e468ba9788b253816f8d8b6894d3472c24\"},\"contracts/protocol/lib/BaseMath.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { SafeMath } from \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\n\\n\\n/**\\n * @title BaseMath\\n * @author axor\\n *\\n * @dev Arithmetic for fixed-point numbers with 18 decimals of precision.\\n */\\nlibrary BaseMath {\\n    using SafeMath for uint256;\\n\\n    // The number One in the BaseMath system.\\n    uint256 constant internal BASE = 10 ** 18;\\n\\n    /**\\n     * @dev Getter function since constants can't be read directly from libraries.\\n     */\\n    function base()\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return BASE;\\n    }\\n\\n    /**\\n     * @dev Multiplies a value by a base value (result is rounded down).\\n     */\\n    function baseMul(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return value.mul(baseValue).div(BASE);\\n    }\\n\\n    /**\\n     * @dev Multiplies a value by a base value (result is rounded down).\\n     *  Intended as an alternaltive to baseMul to prevent overflow, when `value` is known\\n     *  to be divisible by `BASE`.\\n     */\\n    function baseDivMul(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return value.div(BASE).mul(baseValue);\\n    }\\n\\n    /**\\n     * @dev Multiplies a value by a base value (result is rounded up).\\n     */\\n    function baseMulRoundUp(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        if (value == 0 || baseValue == 0) {\\n            return 0;\\n        }\\n        return value.mul(baseValue).sub(1).div(BASE).add(1);\\n    }\\n\\n    /**\\n     * @dev Divide a value by a base value (result is rounded down).\\n     */\\n    function baseDiv(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return value.mul(BASE).div(baseValue);\\n    }\\n\\n    /**\\n     * @dev Returns a base value representing the reciprocal of another base value (result is\\n     *  rounded down).\\n     */\\n    function baseReciprocal(\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return baseDiv(BASE, baseValue);\\n    }\\n}\\n\",\"keccak256\":\"0x67144b777ef4e8feaa770a74ea879ead4e3d94da4cfdc795440033fbc9e6397a\"},\"contracts/protocol/lib/Math.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { SafeMath } from \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\n\\n\\n/**\\n * @title Math\\n * @author axor\\n *\\n * @dev Library for non-standard Math functions.\\n */\\nlibrary Math {\\n    using SafeMath for uint256;\\n\\n    // ============ Library Functions ============\\n\\n    /**\\n     * @dev Return target * (numerator / denominator), rounded down.\\n     */\\n    function getFraction(\\n        uint256 target,\\n        uint256 numerator,\\n        uint256 denominator\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return target.mul(numerator).div(denominator);\\n    }\\n\\n    /**\\n     * @dev Return target * (numerator / denominator), rounded up.\\n     */\\n    function getFractionRoundUp(\\n        uint256 target,\\n        uint256 numerator,\\n        uint256 denominator\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        if (target == 0 || numerator == 0) {\\n            // SafeMath will check for zero denominator\\n            return SafeMath.div(0, denominator);\\n        }\\n        return target.mul(numerator).sub(1).div(denominator).add(1);\\n    }\\n\\n    /**\\n     * @dev Returns the minimum between a and b.\\n     */\\n    function min(\\n        uint256 a,\\n        uint256 b\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return a < b ? a : b;\\n    }\\n\\n    /**\\n     * @dev Returns the maximum between a and b.\\n     */\\n    function max(\\n        uint256 a,\\n        uint256 b\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return a > b ? a : b;\\n    }\\n}\\n\",\"keccak256\":\"0xd1792d2ed771f4b8cc6819e80153c300d054e593d1d2bb71fabec5231150b437\"},\"contracts/protocol/lib/SafeCast.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title SafeCast\\n * @author axor\\n *\\n * @dev Library for casting uint256 to other types of uint.\\n */\\nlibrary SafeCast {\\n\\n    /**\\n     * @dev Returns the downcasted uint128 from uint256, reverting on\\n     *  overflow (i.e. when the input is greater than largest uint128).\\n     *\\n     *  Counterpart to Solidity's `uint128` operator.\\n     *\\n     *  Requirements:\\n     *  - `value` must fit into 128 bits.\\n     */\\n    function toUint128(\\n        uint256 value\\n    )\\n        internal\\n        pure\\n        returns (uint128)\\n    {\\n        require(value < 2**128, \\\"SafeCast: value doesn\\\\'t fit in 128 bits\\\");\\n        return uint128(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint120 from uint256, reverting on\\n     *  overflow (i.e. when the input is greater than largest uint120).\\n     *\\n     *  Counterpart to Solidity's `uint120` operator.\\n     *\\n     *  Requirements:\\n     *  - `value` must fit into 120 bits.\\n     */\\n    function toUint120(\\n        uint256 value\\n    )\\n        internal\\n        pure\\n        returns (uint120)\\n    {\\n        require(value < 2**120, \\\"SafeCast: value doesn\\\\'t fit in 120 bits\\\");\\n        return uint120(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint32 from uint256, reverting on\\n     *  overflow (i.e. when the input is greater than largest uint32).\\n     *\\n     *  Counterpart to Solidity's `uint32` operator.\\n     *\\n     *  Requirements:\\n     *  - `value` must fit into 32 bits.\\n     */\\n    function toUint32(\\n        uint256 value\\n    )\\n        internal\\n        pure\\n        returns (uint32)\\n    {\\n        require(value < 2**32, \\\"SafeCast: value doesn\\\\'t fit in 32 bits\\\");\\n        return uint32(value);\\n    }\\n}\\n\",\"keccak256\":\"0x3bd9c5bf7064d518ddd24043b185fc85b9d8f8fab471fd2a98bfd48ef8f257ca\"},\"contracts/protocol/lib/SignedMath.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { SafeMath } from \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\n\\n\\n/**\\n * @title SignedMath\\n * @author axor\\n *\\n * @dev SignedMath library for doing math with signed integers.\\n */\\nlibrary SignedMath {\\n    using SafeMath for uint256;\\n\\n    // ============ Structs ============\\n\\n    struct Int {\\n        uint256 value;\\n        bool isPositive;\\n    }\\n\\n    // ============ Functions ============\\n\\n    /**\\n     * @dev Returns a new signed integer equal to a signed integer plus an unsigned integer.\\n     */\\n    function add(\\n        Int memory sint,\\n        uint256 value\\n    )\\n        internal\\n        pure\\n        returns (Int memory)\\n    {\\n        if (sint.isPositive) {\\n            return Int({\\n                value: value.add(sint.value),\\n                isPositive: true\\n            });\\n        }\\n        if (sint.value < value) {\\n            return Int({\\n                value: value.sub(sint.value),\\n                isPositive: true\\n            });\\n        }\\n        return Int({\\n            value: sint.value.sub(value),\\n            isPositive: false\\n        });\\n    }\\n\\n    /**\\n     * @dev Returns a new signed integer equal to a signed integer minus an unsigned integer.\\n     */\\n    function sub(\\n        Int memory sint,\\n        uint256 value\\n    )\\n        internal\\n        pure\\n        returns (Int memory)\\n    {\\n        if (!sint.isPositive) {\\n            return Int({\\n                value: value.add(sint.value),\\n                isPositive: false\\n            });\\n        }\\n        if (sint.value > value) {\\n            return Int({\\n                value: sint.value.sub(value),\\n                isPositive: true\\n            });\\n        }\\n        return Int({\\n            value: value.sub(sint.value),\\n            isPositive: false\\n        });\\n    }\\n\\n    /**\\n     * @dev Returns a new signed integer equal to a signed integer plus another signed integer.\\n     */\\n    function signedAdd(\\n        Int memory augend,\\n        Int memory addend\\n    )\\n        internal\\n        pure\\n        returns (Int memory)\\n    {\\n        return addend.isPositive\\n            ? add(augend, addend.value)\\n            : sub(augend, addend.value);\\n    }\\n\\n    /**\\n     * @dev Returns a new signed integer equal to a signed integer minus another signed integer.\\n     */\\n    function signedSub(\\n        Int memory minuend,\\n        Int memory subtrahend\\n    )\\n        internal\\n        pure\\n        returns (Int memory)\\n    {\\n        return subtrahend.isPositive\\n            ? sub(minuend, subtrahend.value)\\n            : add(minuend, subtrahend.value);\\n    }\\n\\n    /**\\n     * @dev Returns true if signed integer `a` is greater than signed integer `b`, false otherwise.\\n     */\\n    function gt(\\n        Int memory a,\\n        Int memory b\\n    )\\n        internal\\n        pure\\n        returns (bool)\\n    {\\n        if (a.isPositive) {\\n            if (b.isPositive) {\\n                return a.value > b.value;\\n            } else {\\n                // True, unless both values are zero.\\n                return a.value != 0 || b.value != 0;\\n            }\\n        } else {\\n            if (b.isPositive) {\\n                return false;\\n            } else {\\n                return a.value < b.value;\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the minimum of signed integers `a` and `b`.\\n     */\\n    function min(\\n        Int memory a,\\n        Int memory b\\n    )\\n        internal\\n        pure\\n        returns (Int memory)\\n    {\\n        return gt(b, a) ? a : b;\\n    }\\n\\n    /**\\n     * @dev Returns the maximum of signed integers `a` and `b`.\\n     */\\n    function max(\\n        Int memory a,\\n        Int memory b\\n    )\\n        internal\\n        pure\\n        returns (Int memory)\\n    {\\n        return gt(a, b) ? a : b;\\n    }\\n}\\n\",\"keccak256\":\"0x2705b897ceef62db3ec301707f4667a4332318b571101c6a554b80243951361c\"},\"contracts/protocol/v1/intf/I_P1Funder.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_P1Funder\\n * @author axor\\n *\\n * @notice Interface for an oracle providing the funding rate for a perpetual market.\\n */\\ninterface I_P1Funder {\\n\\n    /**\\n     * @notice Calculates the signed funding amount that has accumulated over a period of time.\\n     *\\n     * @param  timeDelta  Number of seconds over which to calculate the accumulated funding amount.\\n     * @return            True if the funding rate is positive, and false otherwise.\\n     * @return            The funding amount as a unitless rate, represented as a fixed-point number\\n     *                    with 18 decimals.\\n     */\\n    function getFunding(\\n        uint256 timeDelta\\n    )\\n        external\\n        view\\n        returns (bool, uint256);\\n}\\n\",\"keccak256\":\"0x09fcc8fb1894efa2b75112ebc875aa0f4e5cb8da55044b2f9d3d813af6b9cd31\"},\"contracts/protocol/v1/lib/P1IndexMath.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { P1Types } from \\\"./P1Types.sol\\\";\\n\\n\\n/**\\n * @title P1IndexMath\\n * @author axor\\n *\\n * @dev Library for manipulating P1Types.Index structs.\\n */\\nlibrary P1IndexMath {\\n\\n    // ============ Constants ============\\n\\n    uint256 private constant FLAG_IS_POSITIVE = 1 << (8 * 16);\\n\\n    // ============ Functions ============\\n\\n    /**\\n     * @dev Returns a compressed bytes32 representation of the index for logging.\\n     */\\n    function toBytes32(\\n        P1Types.Index memory index\\n    )\\n        internal\\n        pure\\n        returns (bytes32)\\n    {\\n        uint256 result =\\n            index.value\\n            | (index.isPositive ? FLAG_IS_POSITIVE : 0)\\n            | (uint256(index.timestamp) << 136);\\n        return bytes32(result);\\n    }\\n}\\n\",\"keccak256\":\"0xc39ba7d977bf065834479c1c0405b3adc0e9ff36deba2f6b0c5770c0ff77f21d\"},\"contracts/protocol/v1/lib/P1Types.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title P1Types\\n * @author axor\\n *\\n * @dev Library for common types used in PerpetualV1 contracts.\\n */\\nlibrary P1Types {\\n    // ============ Structs ============\\n\\n    /**\\n     * @dev Used to represent the global index and each account's cached index.\\n     *  Used to settle funding paymennts on a per-account basis.\\n     */\\n    struct Index {\\n        uint32 timestamp;\\n        bool isPositive;\\n        uint128 value;\\n    }\\n\\n    /**\\n     * @dev Used to track the signed margin balance and position balance values for each account.\\n     */\\n    struct Balance {\\n        bool marginIsPositive;\\n        bool positionIsPositive;\\n        uint120 margin;\\n        uint120 position;\\n    }\\n\\n    /**\\n     * @dev Used to cache commonly-used variables that are relatively gas-intensive to obtain.\\n     */\\n    struct Context {\\n        uint256 price;\\n        uint256 minCollateral;\\n        Index index;\\n    }\\n\\n    /**\\n     * @dev Used by contracts implementing the I_P1Trader interface to return the result of a trade.\\n     */\\n    struct TradeResult {\\n        uint256 marginAmount;\\n        uint256 positionAmount;\\n        bool isBuy; // From taker's perspective.\\n        bytes32 traderFlags;\\n    }\\n}\\n\",\"keccak256\":\"0x31f6c089ca233eff543e6587d4e6e159e1ccf5d3b4ec14552d18d1cfb360d18e\"},\"contracts/protocol/v1/oracles/P1FundingOracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { SafeMath } from \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\nimport { Ownable } from \\\"@openzeppelin/contracts/ownership/Ownable.sol\\\";\\nimport { BaseMath } from \\\"../../lib/BaseMath.sol\\\";\\nimport { Math } from \\\"../../lib/Math.sol\\\";\\nimport { SafeCast } from \\\"../../lib/SafeCast.sol\\\";\\nimport { SignedMath } from \\\"../../lib/SignedMath.sol\\\";\\nimport { I_P1Funder } from \\\"../intf/I_P1Funder.sol\\\";\\nimport { P1IndexMath } from \\\"../lib/P1IndexMath.sol\\\";\\nimport { P1Types } from \\\"../lib/P1Types.sol\\\";\\n\\n\\n/**\\n * @title P1FundingOracle\\n * @author axor\\n *\\n * @notice Oracle providing the funding rate for a perpetual market.\\n */\\ncontract P1FundingOracle is\\n    Ownable,\\n    I_P1Funder\\n{\\n    using BaseMath for uint256;\\n    using SafeCast for uint256;\\n    using SafeMath for uint128;\\n    using SafeMath for uint256;\\n    using P1IndexMath for P1Types.Index;\\n    using SignedMath for SignedMath.Int;\\n\\n    // ============ Constants ============\\n\\n    uint256 private constant FLAG_IS_POSITIVE = 1 << 128;\\n    uint128 constant internal BASE = 10 ** 18;\\n\\n    /**\\n     * @notice Bounding params constraining updates to the funding rate.\\n     *\\n     *  Like the funding rate, these are per-second rates, fixed-point with 18 decimals.\\n     *  We calculate the per-second rates from the market specifications, which use 8-hour rates:\\n     *  - The max absolute funding rate is 0.75% (8-hour rate).\\n     *  - The max change over a 45-minute period is 1.5% (8-hour rate).\\n     *\\n     *  This means the fastest the funding rate can go from its min to its max value, or vice versa,\\n     *  is in 45 minutes.\\n     */\\n    uint128 public constant MAX_ABS_VALUE = BASE * 75 / 10000 / (8 hours);\\n    uint128 public constant MAX_ABS_DIFF_PER_SECOND = MAX_ABS_VALUE * 2 / (45 minutes);\\n\\n    // ============ Events ============\\n\\n    event LogFundingRateUpdated(\\n        bytes32 fundingRate\\n    );\\n\\n    event LogFundingRateProviderSet(\\n        address fundingRateProvider\\n    );\\n\\n    // ============ Mutable Storage ============\\n\\n    // The funding rate is denoted in units per second, as a fixed-point number with 18 decimals.\\n    P1Types.Index private _FUNDING_RATE_;\\n\\n    // Address which has the ability to update the funding rate.\\n    address public _FUNDING_RATE_PROVIDER_;\\n\\n    // ============ Constructor ============\\n\\n    constructor(\\n        address fundingRateProvider\\n    )\\n        public\\n    {\\n        P1Types.Index memory fundingRate = P1Types.Index({\\n            timestamp: block.timestamp.toUint32(),\\n            isPositive: true,\\n            value: 0\\n        });\\n        _FUNDING_RATE_ = fundingRate;\\n        _FUNDING_RATE_PROVIDER_ = fundingRateProvider;\\n\\n        emit LogFundingRateUpdated(fundingRate.toBytes32());\\n        emit LogFundingRateProviderSet(fundingRateProvider);\\n    }\\n\\n    // ============ External Functions ============\\n\\n    /**\\n     * @notice Set the funding rate, denoted in units per second, fixed-point with 18 decimals.\\n     * @dev Can only be called by the funding rate provider. Emits the LogFundingRateUpdated event.\\n     *\\n     * @param  newRate  The intended new funding rate. Is bounded by the global constant bounds.\\n     * @return          The new funding rate with a timestamp of the update.\\n     */\\n    function setFundingRate(\\n        SignedMath.Int calldata newRate\\n    )\\n        external\\n        returns (P1Types.Index memory)\\n    {\\n        require(\\n            msg.sender == _FUNDING_RATE_PROVIDER_,\\n            \\\"The funding rate can only be set by the funding rate provider\\\"\\n        );\\n\\n        SignedMath.Int memory boundedNewRate = _boundRate(newRate);\\n        P1Types.Index memory boundedNewRateWithTimestamp = P1Types.Index({\\n            timestamp: block.timestamp.toUint32(),\\n            isPositive: boundedNewRate.isPositive,\\n            value: boundedNewRate.value.toUint128()\\n        });\\n        _FUNDING_RATE_ = boundedNewRateWithTimestamp;\\n\\n        emit LogFundingRateUpdated(boundedNewRateWithTimestamp.toBytes32());\\n\\n        return boundedNewRateWithTimestamp;\\n    }\\n\\n    /**\\n     * @notice Set the funding rate provider. Can only be called by the admin.\\n     * @dev Emits the LogFundingRateProviderSet event.\\n     *\\n     * @param  newProvider  The new provider, who will have the ability to set the funding rate.\\n     */\\n    function setFundingRateProvider(\\n        address newProvider\\n    )\\n        external\\n        onlyOwner\\n    {\\n        _FUNDING_RATE_PROVIDER_ = newProvider;\\n        emit LogFundingRateProviderSet(newProvider);\\n    }\\n\\n    // ============ Public Functions ============\\n\\n    /**\\n     * @notice Calculates the signed funding amount that has accumulated over a period of time.\\n     *\\n     * @param  timeDelta  Number of seconds over which to calculate the accumulated funding amount.\\n     * @return            True if the funding rate is positive, and false otherwise.\\n     * @return            The funding amount as a unitless rate, represented as a fixed-point number\\n     *                    with 18 decimals.\\n     */\\n    function getFunding(\\n        uint256 timeDelta\\n    )\\n        public\\n        view\\n        returns (bool, uint256)\\n    {\\n        // Note: Funding interest in PerpetualV1 does not compound, as the interest affects margin\\n        // balances but is calculated based on position balances.\\n        P1Types.Index memory fundingRate = _FUNDING_RATE_;\\n        uint256 fundingAmount = uint256(fundingRate.value).mul(timeDelta);\\n        return (fundingRate.isPositive, fundingAmount);\\n    }\\n\\n    // ============ Helper Functions ============\\n\\n    /**\\n     * @dev Apply the contract-defined bounds and return the bounded rate.\\n     */\\n    function _boundRate(\\n        SignedMath.Int memory newRate\\n    )\\n        private\\n        view\\n        returns (SignedMath.Int memory)\\n    {\\n        // Get the old rate from storage.\\n        P1Types.Index memory oldRateWithTimestamp = _FUNDING_RATE_;\\n        SignedMath.Int memory oldRate = SignedMath.Int({\\n            value: oldRateWithTimestamp.value,\\n            isPositive: oldRateWithTimestamp.isPositive\\n        });\\n\\n        // Get the maximum allowed change in the rate.\\n        uint256 timeDelta = block.timestamp.sub(oldRateWithTimestamp.timestamp);\\n        uint256 maxDiff = MAX_ABS_DIFF_PER_SECOND.mul(timeDelta);\\n\\n        // Calculate and return the bounded rate.\\n        if (newRate.gt(oldRate)) {\\n            SignedMath.Int memory upperBound = SignedMath.min(\\n                oldRate.add(maxDiff),\\n                SignedMath.Int({ value: MAX_ABS_VALUE, isPositive: true })\\n            );\\n            return SignedMath.min(\\n                newRate,\\n                upperBound\\n            );\\n        } else {\\n            SignedMath.Int memory lowerBound = SignedMath.max(\\n                oldRate.sub(maxDiff),\\n                SignedMath.Int({ value: MAX_ABS_VALUE, isPositive: false })\\n            );\\n            return SignedMath.max(\\n                newRate,\\n                lowerBound\\n            );\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x6879417d2910adfc5c28fe267ca32ffc04582143c19b7af23f405f22feb2ee2c\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b506040516200139b3803806200139b833981016040819052620000349162000292565b6000620000496001600160e01b03620001e316565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3506200009d6200025f565b6040518060600160405280620000be42620001e760201b620006961760201c565b63ffffffff908116825260016020808401829052600060409485015284518254868301519587015163ffffffff19909116919094161760ff60201b19166401000000009415159490940293909317600160281b600160a81b031916650100000000006001600160801b0390931692909202919091179055600280546001600160a01b0319166001600160a01b0386161790559091507f2ebf65220b5046a8d9cff102710ef15de0a0bf3709dcc11c3af50abe472e1c22906200018b9083906200021d811b620006e517901c565b6040516200019a919062000331565b60405180910390a17f232d43841005a98dbf929d234a7a8d2c4c570becee067c9c81bcd4e0acd0ab9282604051620001d3919062000321565b60405180910390a1505062000392565b3390565b60006401000000008210620002195760405162461bcd60e51b8152600401620002109062000341565b60405180910390fd5b5090565b6000806088836000015163ffffffff16901b83602001516200024157600062000247565b600160801b5b60408501516001600160801b03161717915050919050565b604080516060810182526000808252602082018190529181019190915290565b80516200028c8162000378565b92915050565b600060208284031215620002a557600080fd5b6000620002b384846200027f565b949350505050565b620002c6816200035c565b82525050565b620002c68162000369565b6000620002e660268362000353565b7f53616665436173743a2076616c756520646f65736e27742066697420696e203381526532206269747360d01b602082015260400192915050565b602081016200028c8284620002bb565b602081016200028c8284620002cc565b602080825281016200028c81620002d7565b90815260200190565b60006200028c826200036c565b90565b6001600160a01b031690565b62000383816200035c565b81146200038f57600080fd5b50565b610ff980620003a26000396000f3fe608060405234801561001057600080fd5b50600436106100be5760003560e01c80638da5cb5b11610076578063ebed4bd41161005b578063ebed4bd414610138578063ef460e3614610159578063f2fde38b14610179576100be565b80638da5cb5b1461011b5780638f32d59b14610123576100be565b8063499c9c6d116100a7578063499c9c6d146100f657806356a281ea1461010b578063715018a614610113576100be565b80630b8781ee146100c3578063109f60e3146100e1575b600080fd5b6100cb61018c565b6040516100d89190610e10565b60405180910390f35b6100f46100ef366004610ab7565b61019b565b005b6100fe61022b565b6040516100d89190610ee4565b6100fe61023b565b6100f4610249565b6100cb6102c4565b61012b6102d3565b6040516100d89190610e1e565b61014b610146366004610b19565b6102f7565b6040516100d8929190610e2c565b61016c610167366004610add565b610368565b6040516100d89190610ed6565b6100f4610187366004610ab7565b6104c1565b6002546001600160a01b031681565b6101a36102d3565b6101c85760405162461bcd60e51b81526004016101bf90610eb6565b60405180910390fd5b6002805473ffffffffffffffffffffffffffffffffffffffff19166001600160a01b0383161790556040517f232d43841005a98dbf929d234a7a8d2c4c570becee067c9c81bcd4e0acd0ab9290610220908390610e10565b60405180910390a150565b617080661aa535d3d0c0005b0481565b610a8c64794415f854610237565b6102516102d3565b61026d5760405162461bcd60e51b81526004016101bf90610eb6565b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b6000546001600160a01b031690565b600080546001600160a01b03166102e86104f1565b6001600160a01b031614905090565b600080610302610a00565b506040805160608101825260015463ffffffff8082168352640100000000820460ff1615156020840152650100000000009091046001600160801b03169282018390529091600091610357919087906104f516565b602090920151935090915050915091565b610370610a00565b6002546001600160a01b0316331461039a5760405162461bcd60e51b81526004016101bf90610e96565b6103a2610a20565b6103b96103b436859003850185610afb565b610538565b90506103c3610a00565b60405180606001604052806103d742610696565b63ffffffff1681526020018360200151151581526020016103fb84600001516106c0565b6001600160801b039081169091528151600180546020850151604086015190941665010000000000027fffffffffffffffffffffff00000000000000000000000000000000ffffffffff9415156401000000000264ff000000001963ffffffff90951663ffffffff199093169290921793909316179290921617905590507f2ebf65220b5046a8d9cff102710ef15de0a0bf3709dcc11c3af50abe472e1c226104a3826106e5565b6040516104b09190610e47565b60405180910390a19150505b919050565b6104c96102d3565b6104e55760405162461bcd60e51b81526004016101bf90610eb6565b6104ee81610725565b50565b3390565b60008261050457506000610532565b8282028284828161051157fe5b041461052f5760405162461bcd60e51b81526004016101bf90610ea6565b90505b92915050565b610540610a20565b610548610a00565b506040805160608101825260015463ffffffff81168252640100000000810460ff16151560208301526501000000000090046001600160801b031691810191909152610592610a20565b50604080518082018252908201516001600160801b0316815260208083015115159082015281516000906105d190429063ffffffff908116906107b316565b905060006105e9630b7f70728363ffffffff6104f516565b90506105fb868463ffffffff6107f516565b1561065157610608610a20565b61063961061b858463ffffffff61084916565b60408051808201909152643ca20afc2a8152600160208201526108e8565b905061064587826108e8565b955050505050506104bc565b610659610a20565b61068a61066c858463ffffffff61090b16565b60408051808201909152643ca20afc2a815260006020820152610998565b90506106458782610998565b600064010000000082106106bc5760405162461bcd60e51b81526004016101bf90610ec6565b5090565b6000600160801b82106106bc5760405162461bcd60e51b81526004016101bf90610e86565b6000806088836000015163ffffffff16901b836020015161070757600061070d565b600160801b5b60408501516001600160801b03161717915050919050565b6001600160a01b03811661074b5760405162461bcd60e51b81526004016101bf90610e66565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff19166001600160a01b0392909216919091179055565b600061052f83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f7700008152506109aa565b600082602001511561082c5781602001511561081657508051825111610532565b82511515806108255750815115155b9050610532565b81602001511561083e57506000610532565b508051825110610532565b610851610a20565b82602001511561088e57604051806040016040528061087d8560000151856109db90919063ffffffff16565b815260016020909101529050610532565b82518211156108b957604051806040016040528061087d8560000151856107b390919063ffffffff16565b60408051808201909152835181906108d7908563ffffffff6107b316565b815260006020909101529392505050565b6108f0610a20565b6108fa82846107f5565b610904578161052f565b5090919050565b610913610a20565b826020015161094f57604051806040016040528061093e8560000151856109db90919063ffffffff16565b815260006020909101529050610532565b825182101561097657604080518082019091528351819061087d908563ffffffff6107b316565b60405180604001604052806108d78560000151856107b390919063ffffffff16565b6109a0610a20565b6108fa83836107f5565b600081848411156109ce5760405162461bcd60e51b81526004016101bf9190610e55565b50508183035b9392505050565b60008282018381101561052f5760405162461bcd60e51b81526004016101bf90610e76565b604080516060810182526000808252602082018190529181019190915290565b604080518082019091526000808252602082015290565b803561053281610f90565b803561053281610fa4565b600060408284031215610a5f57600080fd5b50919050565b600060408284031215610a7757600080fd5b610a816040610ef2565b90506000610a8f8484610aac565b8252506020610aa084848301610a42565b60208301525092915050565b803561053281610fad565b600060208284031215610ac957600080fd5b6000610ad58484610a37565b949350505050565b600060408284031215610aef57600080fd5b6000610ad58484610a4d565b600060408284031215610b0d57600080fd5b6000610ad58484610a65565b600060208284031215610b2b57600080fd5b6000610ad58484610aac565b610b4081610f26565b82525050565b610b4081610f31565b610b4081610f36565b6000610b6382610f19565b610b6d8185610f1d565b9350610b7d818560208601610f5a565b610b8681610f86565b9093019392505050565b6000610b9d602683610f1d565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206181527f6464726573730000000000000000000000000000000000000000000000000000602082015260400192915050565b6000610bfc601b83610f1d565b7f536166654d6174683a206164646974696f6e206f766572666c6f770000000000815260200192915050565b6000610c35602783610f1d565b7f53616665436173743a2076616c756520646f65736e27742066697420696e203181527f3238206269747300000000000000000000000000000000000000000000000000602082015260400192915050565b6000610c94603d83610f1d565b7f5468652066756e64696e6720726174652063616e206f6e6c792062652073657481527f206279207468652066756e64696e6720726174652070726f7669646572000000602082015260400192915050565b6000610cf3602183610f1d565b7f536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f8152607760f81b602082015260400192915050565b6000610d36602083610f1d565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572815260200192915050565b6000610d6f602683610f1d565b7f53616665436173743a2076616c756520646f65736e27742066697420696e203381527f3220626974730000000000000000000000000000000000000000000000000000602082015260400192915050565b80516060830190610dd28482610e07565b506020820151610de56020850182610b46565b506040820151610df86040850182610dfe565b50505050565b610b4081610f39565b610b4081610f51565b602081016105328284610b37565b602081016105328284610b46565b60408101610e3a8285610b46565b6109d46020830184610b4f565b602081016105328284610b4f565b6020808252810161052f8184610b58565b6020808252810161053281610b90565b6020808252810161053281610bef565b6020808252810161053281610c28565b6020808252810161053281610c87565b6020808252810161053281610ce6565b6020808252810161053281610d29565b6020808252810161053281610d62565b606081016105328284610dc1565b602081016105328284610dfe565b60405181810167ffffffffffffffff81118282101715610f1157600080fd5b604052919050565b5190565b90815260200190565b600061053282610f45565b151590565b90565b6001600160801b031690565b6001600160a01b031690565b63ffffffff1690565b60005b83811015610f75578181015183820152602001610f5d565b83811115610df85750506000910152565b601f01601f191690565b610f9981610f26565b81146104ee57600080fd5b610f9981610f31565b610f9981610f3656fea365627a7a72315820c2c9503dd6d6a7f5b394468199fe5924c946cb4d2e6be954622ef17ec9007ce06c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100be5760003560e01c80638da5cb5b11610076578063ebed4bd41161005b578063ebed4bd414610138578063ef460e3614610159578063f2fde38b14610179576100be565b80638da5cb5b1461011b5780638f32d59b14610123576100be565b8063499c9c6d116100a7578063499c9c6d146100f657806356a281ea1461010b578063715018a614610113576100be565b80630b8781ee146100c3578063109f60e3146100e1575b600080fd5b6100cb61018c565b6040516100d89190610e10565b60405180910390f35b6100f46100ef366004610ab7565b61019b565b005b6100fe61022b565b6040516100d89190610ee4565b6100fe61023b565b6100f4610249565b6100cb6102c4565b61012b6102d3565b6040516100d89190610e1e565b61014b610146366004610b19565b6102f7565b6040516100d8929190610e2c565b61016c610167366004610add565b610368565b6040516100d89190610ed6565b6100f4610187366004610ab7565b6104c1565b6002546001600160a01b031681565b6101a36102d3565b6101c85760405162461bcd60e51b81526004016101bf90610eb6565b60405180910390fd5b6002805473ffffffffffffffffffffffffffffffffffffffff19166001600160a01b0383161790556040517f232d43841005a98dbf929d234a7a8d2c4c570becee067c9c81bcd4e0acd0ab9290610220908390610e10565b60405180910390a150565b617080661aa535d3d0c0005b0481565b610a8c64794415f854610237565b6102516102d3565b61026d5760405162461bcd60e51b81526004016101bf90610eb6565b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b6000546001600160a01b031690565b600080546001600160a01b03166102e86104f1565b6001600160a01b031614905090565b600080610302610a00565b506040805160608101825260015463ffffffff8082168352640100000000820460ff1615156020840152650100000000009091046001600160801b03169282018390529091600091610357919087906104f516565b602090920151935090915050915091565b610370610a00565b6002546001600160a01b0316331461039a5760405162461bcd60e51b81526004016101bf90610e96565b6103a2610a20565b6103b96103b436859003850185610afb565b610538565b90506103c3610a00565b60405180606001604052806103d742610696565b63ffffffff1681526020018360200151151581526020016103fb84600001516106c0565b6001600160801b039081169091528151600180546020850151604086015190941665010000000000027fffffffffffffffffffffff00000000000000000000000000000000ffffffffff9415156401000000000264ff000000001963ffffffff90951663ffffffff199093169290921793909316179290921617905590507f2ebf65220b5046a8d9cff102710ef15de0a0bf3709dcc11c3af50abe472e1c226104a3826106e5565b6040516104b09190610e47565b60405180910390a19150505b919050565b6104c96102d3565b6104e55760405162461bcd60e51b81526004016101bf90610eb6565b6104ee81610725565b50565b3390565b60008261050457506000610532565b8282028284828161051157fe5b041461052f5760405162461bcd60e51b81526004016101bf90610ea6565b90505b92915050565b610540610a20565b610548610a00565b506040805160608101825260015463ffffffff81168252640100000000810460ff16151560208301526501000000000090046001600160801b031691810191909152610592610a20565b50604080518082018252908201516001600160801b0316815260208083015115159082015281516000906105d190429063ffffffff908116906107b316565b905060006105e9630b7f70728363ffffffff6104f516565b90506105fb868463ffffffff6107f516565b1561065157610608610a20565b61063961061b858463ffffffff61084916565b60408051808201909152643ca20afc2a8152600160208201526108e8565b905061064587826108e8565b955050505050506104bc565b610659610a20565b61068a61066c858463ffffffff61090b16565b60408051808201909152643ca20afc2a815260006020820152610998565b90506106458782610998565b600064010000000082106106bc5760405162461bcd60e51b81526004016101bf90610ec6565b5090565b6000600160801b82106106bc5760405162461bcd60e51b81526004016101bf90610e86565b6000806088836000015163ffffffff16901b836020015161070757600061070d565b600160801b5b60408501516001600160801b03161717915050919050565b6001600160a01b03811661074b5760405162461bcd60e51b81526004016101bf90610e66565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff19166001600160a01b0392909216919091179055565b600061052f83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f7700008152506109aa565b600082602001511561082c5781602001511561081657508051825111610532565b82511515806108255750815115155b9050610532565b81602001511561083e57506000610532565b508051825110610532565b610851610a20565b82602001511561088e57604051806040016040528061087d8560000151856109db90919063ffffffff16565b815260016020909101529050610532565b82518211156108b957604051806040016040528061087d8560000151856107b390919063ffffffff16565b60408051808201909152835181906108d7908563ffffffff6107b316565b815260006020909101529392505050565b6108f0610a20565b6108fa82846107f5565b610904578161052f565b5090919050565b610913610a20565b826020015161094f57604051806040016040528061093e8560000151856109db90919063ffffffff16565b815260006020909101529050610532565b825182101561097657604080518082019091528351819061087d908563ffffffff6107b316565b60405180604001604052806108d78560000151856107b390919063ffffffff16565b6109a0610a20565b6108fa83836107f5565b600081848411156109ce5760405162461bcd60e51b81526004016101bf9190610e55565b50508183035b9392505050565b60008282018381101561052f5760405162461bcd60e51b81526004016101bf90610e76565b604080516060810182526000808252602082018190529181019190915290565b604080518082019091526000808252602082015290565b803561053281610f90565b803561053281610fa4565b600060408284031215610a5f57600080fd5b50919050565b600060408284031215610a7757600080fd5b610a816040610ef2565b90506000610a8f8484610aac565b8252506020610aa084848301610a42565b60208301525092915050565b803561053281610fad565b600060208284031215610ac957600080fd5b6000610ad58484610a37565b949350505050565b600060408284031215610aef57600080fd5b6000610ad58484610a4d565b600060408284031215610b0d57600080fd5b6000610ad58484610a65565b600060208284031215610b2b57600080fd5b6000610ad58484610aac565b610b4081610f26565b82525050565b610b4081610f31565b610b4081610f36565b6000610b6382610f19565b610b6d8185610f1d565b9350610b7d818560208601610f5a565b610b8681610f86565b9093019392505050565b6000610b9d602683610f1d565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206181527f6464726573730000000000000000000000000000000000000000000000000000602082015260400192915050565b6000610bfc601b83610f1d565b7f536166654d6174683a206164646974696f6e206f766572666c6f770000000000815260200192915050565b6000610c35602783610f1d565b7f53616665436173743a2076616c756520646f65736e27742066697420696e203181527f3238206269747300000000000000000000000000000000000000000000000000602082015260400192915050565b6000610c94603d83610f1d565b7f5468652066756e64696e6720726174652063616e206f6e6c792062652073657481527f206279207468652066756e64696e6720726174652070726f7669646572000000602082015260400192915050565b6000610cf3602183610f1d565b7f536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f8152607760f81b602082015260400192915050565b6000610d36602083610f1d565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572815260200192915050565b6000610d6f602683610f1d565b7f53616665436173743a2076616c756520646f65736e27742066697420696e203381527f3220626974730000000000000000000000000000000000000000000000000000602082015260400192915050565b80516060830190610dd28482610e07565b506020820151610de56020850182610b46565b506040820151610df86040850182610dfe565b50505050565b610b4081610f39565b610b4081610f51565b602081016105328284610b37565b602081016105328284610b46565b60408101610e3a8285610b46565b6109d46020830184610b4f565b602081016105328284610b4f565b6020808252810161052f8184610b58565b6020808252810161053281610b90565b6020808252810161053281610bef565b6020808252810161053281610c28565b6020808252810161053281610c87565b6020808252810161053281610ce6565b6020808252810161053281610d29565b6020808252810161053281610d62565b606081016105328284610dc1565b602081016105328284610dfe565b60405181810167ffffffffffffffff81118282101715610f1157600080fd5b604052919050565b5190565b90815260200190565b600061053282610f45565b151590565b90565b6001600160801b031690565b6001600160a01b031690565b63ffffffff1690565b60005b83811015610f75578181015183820152602001610f5d565b83811115610df85750506000910152565b601f01601f191690565b610f9981610f26565b81146104ee57600080fd5b610f9981610f31565b610f9981610f3656fea365627a7a72315820c2c9503dd6d6a7f5b394468199fe5924c946cb4d2e6be954622ef17ec9007ce06c6578706572696d656e74616cf564736f6c63430005100040",
+  "devdoc": {
+    "author": "axor",
+    "methods": {
+      "getFunding(uint256)": {
+        "params": {
+          "timeDelta": "Number of seconds over which to calculate the accumulated funding amount."
+        },
+        "return": "True if the funding rate is positive, and false otherwise.The funding amount as a unitless rate, represented as a fixed-point number                   with 18 decimals."
+      },
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "setFundingRate((uint256,bool))": {
+        "details": "Can only be called by the funding rate provider. Emits the LogFundingRateUpdated event.",
+        "params": {
+          "newRate": "The intended new funding rate. Is bounded by the global constant bounds."
+        },
+        "return": "The new funding rate with a timestamp of the update."
+      },
+      "setFundingRateProvider(address)": {
+        "details": "Emits the LogFundingRateProviderSet event.",
+        "params": {
+          "newProvider": "The new provider, who will have the ability to set the funding rate."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "P1FundingOracle"
+  },
+  "userdoc": {
+    "methods": {
+      "getFunding(uint256)": {
+        "notice": "Calculates the signed funding amount that has accumulated over a period of time."
+      },
+      "setFundingRate((uint256,bool))": {
+        "notice": "Set the funding rate, denoted in units per second, fixed-point with 18 decimals."
+      },
+      "setFundingRateProvider(address)": {
+        "notice": "Set the funding rate provider. Can only be called by the admin."
+      }
+    },
+    "notice": "Oracle providing the funding rate for a perpetual market."
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 220,
+        "contract": "contracts/protocol/v1/oracles/P1FundingOracle.sol:P1FundingOracle",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 5515,
+        "contract": "contracts/protocol/v1/oracles/P1FundingOracle.sol:P1FundingOracle",
+        "label": "_FUNDING_RATE_",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_struct(Index)5247_storage"
+      },
+      {
+        "astId": 5517,
+        "contract": "contracts/protocol/v1/oracles/P1FundingOracle.sol:P1FundingOracle",
+        "label": "_FUNDING_RATE_PROVIDER_",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_struct(Index)5247_storage": {
+        "encoding": "inplace",
+        "label": "struct P1Types.Index",
+        "members": [
+          {
+            "astId": 5242,
+            "contract": "contracts/protocol/v1/oracles/P1FundingOracle.sol:P1FundingOracle",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint32"
+          },
+          {
+            "astId": 5244,
+            "contract": "contracts/protocol/v1/oracles/P1FundingOracle.sol:P1FundingOracle",
+            "label": "isPositive",
+            "offset": 4,
+            "slot": "0",
+            "type": "t_bool"
+          },
+          {
+            "astId": 5246,
+            "contract": "contracts/protocol/v1/oracles/P1FundingOracle.sol:P1FundingOracle",
+            "label": "value",
+            "offset": 5,
+            "slot": "0",
+            "type": "t_uint128"
+          }
+        ],
+        "numberOfBytes": "32"
+      },
+      "t_uint128": {
+        "encoding": "inplace",
+        "label": "uint128",
+        "numberOfBytes": "16"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      }
+    }
+  }
+}

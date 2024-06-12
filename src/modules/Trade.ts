@@ -22,6 +22,7 @@ import {
   SendOptions,
   TradeArg,
   TxResult,
+  BigNumberable
 } from '../lib/types';
 import { TradeOperation } from './TradeOperation';
 import { Orders } from './Orders';
@@ -52,6 +53,9 @@ export class Trade {
   public async trade(
     accounts: string[],
     tradeArgs: TradeArg[],
+    settlementAmounts: BigNumberable[],
+    settlementIsPositives: boolean[],
+    price: BigNumberable,
     options?: SendOptions,
   ): Promise<TxResult> {
     if (!_.isEqual(accounts, _.chain(accounts).map(_.toLower).sort().sortedUniq().value())) {

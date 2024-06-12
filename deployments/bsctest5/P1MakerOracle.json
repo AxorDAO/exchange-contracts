@@ -1,0 +1,347 @@
+{
+  "address": "0x289A716D9b27513C7434b65A74c3101c9bFBbc7f",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oracle",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "adjustment",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogAdjustmentSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oracle",
+          "type": "address"
+        }
+      ],
+      "name": "LogRouteSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "_ADJUSTMENTS_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "_ROUTER_",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "oracle",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "adjustment",
+          "type": "uint256"
+        }
+      ],
+      "name": "setAdjustment",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "oracle",
+          "type": "address"
+        }
+      ],
+      "name": "setRoute",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xb7c532a98a40536b3b156df3b98bf135ac487724b0a76ab336ce6b1ff129ab37",
+  "receipt": {
+    "to": null,
+    "from": "0x23418D98628f795c4f6dA454B6E61e8042f1cCd7",
+    "contractAddress": "0x289A716D9b27513C7434b65A74c3101c9bFBbc7f",
+    "transactionIndex": 15,
+    "gasUsed": "621804",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000800000000000000000001000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000000000800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000002000010000000000000000000000000000000000000000000000400020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x006717affdd666107afcf964ba1df34c916cbdc6a2fc49535e7937aa5d02fe90",
+    "transactionHash": "0xb7c532a98a40536b3b156df3b98bf135ac487724b0a76ab336ce6b1ff129ab37",
+    "logs": [
+      {
+        "transactionIndex": 15,
+        "blockNumber": 38766407,
+        "transactionHash": "0xb7c532a98a40536b3b156df3b98bf135ac487724b0a76ab336ce6b1ff129ab37",
+        "address": "0x289A716D9b27513C7434b65A74c3101c9bFBbc7f",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000023418d98628f795c4f6da454b6e61e8042f1ccd7"
+        ],
+        "data": "0x",
+        "logIndex": 27,
+        "blockHash": "0x006717affdd666107afcf964ba1df34c916cbdc6a2fc49535e7937aa5d02fe90"
+      }
+    ],
+    "blockNumber": 38766407,
+    "cumulativeGasUsed": "1860679",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "d8a4bed0d8259721c6e731840c9f1c4e",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"oracle\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"adjustment\",\"type\":\"uint256\"}],\"name\":\"LogAdjustmentSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oracle\",\"type\":\"address\"}],\"name\":\"LogRouteSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"_ADJUSTMENTS_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"_ROUTER_\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"oracle\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"adjustment\",\"type\":\"uint256\"}],\"name\":\"setAdjustment\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"oracle\",\"type\":\"address\"}],\"name\":\"setRoute\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"axor\",\"methods\":{\"getPrice()\":{\"return\":\"The price as a fixed-point number with 18 decimals.\"},\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setAdjustment(address,uint256)\":{\"details\":\"Allows the owner to set an adjustment to an oracle source.\",\"params\":{\"adjustment\":\"The adjustment to set when reading from the oracle.\",\"oracle\":\"The oracle to apply the adjustment to.\"}},\"setRoute(address,address)\":{\"details\":\"Allows the owner to set a route for a particular sender.\",\"params\":{\"oracle\":\"The oracle to route the sender to.\",\"sender\":\"The sender to set the route for.\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"P1MakerOracle\"},\"userdoc\":{\"methods\":{\"getPrice()\":{\"notice\":\"Returns the price of the underlying asset relative to the margin token.\"}},\"notice\":\"P1Oracle that reads the price from a Maker V2 Oracle.\"}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/v1/oracles/P1MakerOracle.sol\":\"P1MakerOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/GSN/Context.sol\":{\"content\":\"pragma solidity ^0.5.0;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\ncontract Context {\\n    // Empty internal constructor, to prevent people from mistakenly deploying\\n    // an instance of this contract, which should be used via inheritance.\\n    constructor () internal { }\\n    // solhint-disable-previous-line no-empty-blocks\\n\\n    function _msgSender() internal view returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\"},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"content\":\"pragma solidity ^0.5.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return sub(a, b, \\\"SafeMath: subtraction overflow\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     *\\n     * _Available since v2.4.0._\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        uint256 c = a - b;\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) {\\n            return 0;\\n        }\\n\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return div(a, b, \\\"SafeMath: division by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     *\\n     * _Available since v2.4.0._\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        // Solidity only automatically asserts when dividing by 0\\n        require(b > 0, errorMessage);\\n        uint256 c = a / b;\\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return mod(a, b, \\\"SafeMath: modulo by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts with custom message when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     *\\n     * _Available since v2.4.0._\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b != 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\"},\"@openzeppelin/contracts/ownership/Ownable.sol\":{\"content\":\"pragma solidity ^0.5.0;\\n\\nimport \\\"../GSN/Context.sol\\\";\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\ncontract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor () internal {\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(isOwner(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns true if the caller is the current owner.\\n     */\\n    function isOwner() public view returns (bool) {\\n        return _msgSender() == _owner;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public onlyOwner {\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     */\\n    function _transferOwnership(address newOwner) internal {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0x6fb9d7889769d7cc161225f9ef7a90e468ba9788b253816f8d8b6894d3472c24\"},\"contracts/external/maker/I_MakerOracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_MakerOracle\\n * @author axor\\n *\\n * Interface for the MakerDAO Oracles V2 smart contrats.\\n */\\ninterface I_MakerOracle {\\n\\n    // ============ Getter Functions ============\\n\\n    /**\\n     * @notice Returns the current value as a bytes32.\\n     */\\n    function peek()\\n        external\\n        view\\n        returns (bytes32, bool);\\n\\n    /**\\n     * @notice Requires a fresh price and then returns the current value.\\n     */\\n    function read()\\n        external\\n        view\\n        returns (bytes32);\\n\\n    /**\\n     * @notice Returns the number of signers per poke.\\n     */\\n    function bar()\\n        external\\n        view\\n        returns (uint256);\\n\\n    /**\\n     * @notice Returns the timetamp of the last update.\\n     */\\n    function age()\\n        external\\n        view\\n        returns (uint32);\\n\\n    /**\\n     * @notice Returns 1 if the signer is authorized, and 0 otherwise.\\n     */\\n    function orcl(\\n        address signer\\n    )\\n        external\\n        view\\n        returns (uint256);\\n\\n    /**\\n     * @notice Returns 1 if the address is authorized to read the oracle price, and 0 otherwise.\\n     */\\n    function bud(\\n        address reader\\n    )\\n        external\\n        view\\n        returns (uint256);\\n\\n    /**\\n     * @notice A mapping from the first byte of an authorized signer's address to the signer.\\n     */\\n    function slot(\\n        uint8 signerId\\n    )\\n        external\\n        view\\n        returns (address);\\n\\n    // ============ State-Changing Functions ============\\n\\n    /**\\n     * @notice Updates the value of the oracle\\n     */\\n    function poke(\\n        uint256[] calldata val_,\\n        uint256[] calldata age_,\\n        uint8[] calldata v,\\n        bytes32[] calldata r,\\n        bytes32[] calldata s\\n    )\\n        external;\\n\\n    /**\\n     * @notice Authorize an address to read the oracle price.\\n     */\\n    function kiss(\\n        address reader\\n    )\\n        external;\\n\\n    /**\\n     * @notice Unauthorize an address so it can no longer read the oracle price.\\n     */\\n    function diss(\\n        address reader\\n    )\\n        external;\\n\\n    /**\\n     * @notice Authorize addresses to read the oracle price.\\n     */\\n    function kiss(\\n        address[] calldata readers\\n    )\\n        external;\\n\\n    /**\\n     * @notice Unauthorize addresses so they can no longer read the oracle price.\\n     */\\n    function diss(\\n        address[] calldata readers\\n    )\\n        external;\\n}\\n\",\"keccak256\":\"0x18b8798230c7a0eac084cec0a13e96ba5a68405ec20e361adaacaa9f0b0c352d\"},\"contracts/protocol/lib/BaseMath.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { SafeMath } from \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\n\\n\\n/**\\n * @title BaseMath\\n * @author axor\\n *\\n * @dev Arithmetic for fixed-point numbers with 18 decimals of precision.\\n */\\nlibrary BaseMath {\\n    using SafeMath for uint256;\\n\\n    // The number One in the BaseMath system.\\n    uint256 constant internal BASE = 10 ** 18;\\n\\n    /**\\n     * @dev Getter function since constants can't be read directly from libraries.\\n     */\\n    function base()\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return BASE;\\n    }\\n\\n    /**\\n     * @dev Multiplies a value by a base value (result is rounded down).\\n     */\\n    function baseMul(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return value.mul(baseValue).div(BASE);\\n    }\\n\\n    /**\\n     * @dev Multiplies a value by a base value (result is rounded down).\\n     *  Intended as an alternaltive to baseMul to prevent overflow, when `value` is known\\n     *  to be divisible by `BASE`.\\n     */\\n    function baseDivMul(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return value.div(BASE).mul(baseValue);\\n    }\\n\\n    /**\\n     * @dev Multiplies a value by a base value (result is rounded up).\\n     */\\n    function baseMulRoundUp(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        if (value == 0 || baseValue == 0) {\\n            return 0;\\n        }\\n        return value.mul(baseValue).sub(1).div(BASE).add(1);\\n    }\\n\\n    /**\\n     * @dev Divide a value by a base value (result is rounded down).\\n     */\\n    function baseDiv(\\n        uint256 value,\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return value.mul(BASE).div(baseValue);\\n    }\\n\\n    /**\\n     * @dev Returns a base value representing the reciprocal of another base value (result is\\n     *  rounded down).\\n     */\\n    function baseReciprocal(\\n        uint256 baseValue\\n    )\\n        internal\\n        pure\\n        returns (uint256)\\n    {\\n        return baseDiv(BASE, baseValue);\\n    }\\n}\\n\",\"keccak256\":\"0x67144b777ef4e8feaa770a74ea879ead4e3d94da4cfdc795440033fbc9e6397a\"},\"contracts/protocol/v1/intf/I_P1Oracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_P1Oracle\\n * @author axor\\n *\\n * @notice Interface that PerpetualV1 Price Oracles must implement.\\n */\\ninterface I_P1Oracle {\\n\\n    /**\\n     * @notice Returns the price of the underlying asset relative to the margin token.\\n     *\\n     * @return The price as a fixed-point number with 18 decimals.\\n     */\\n    function getPrice()\\n        external\\n        view\\n        returns (uint256);\\n}\\n\",\"keccak256\":\"0xc5b4c8b57eb0b7156086eaa8ed394f72bbfa2e879ac805096a7b6cf6799b43ef\"},\"contracts/protocol/v1/oracles/P1MakerOracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { Ownable } from \\\"@openzeppelin/contracts/ownership/Ownable.sol\\\";\\nimport { I_MakerOracle } from \\\"../../../external/maker/I_MakerOracle.sol\\\";\\nimport { BaseMath } from \\\"../../lib/BaseMath.sol\\\";\\nimport { I_P1Oracle } from \\\"../intf/I_P1Oracle.sol\\\";\\n\\n\\n/**\\n * @title P1MakerOracle\\n * @author axor\\n *\\n * @notice P1Oracle that reads the price from a Maker V2 Oracle.\\n */\\ncontract P1MakerOracle is\\n    Ownable,\\n    I_P1Oracle\\n{\\n    using BaseMath for uint256;\\n\\n    // ============ Events ============\\n\\n    event LogRouteSet(\\n        address indexed sender,\\n        address oracle\\n    );\\n\\n    event LogAdjustmentSet(\\n        address indexed oracle,\\n        uint256 adjustment\\n    );\\n\\n    // ============ Storage ============\\n\\n    // @dev Maps from the sender to the oracle address to use.\\n    mapping(address => address) public _ROUTER_;\\n\\n    // @dev The amount to adjust the price by. Is as a fixed-point number with 18 decimal places.\\n    mapping(address => uint256) public _ADJUSTMENTS_;\\n\\n    // ============ Public Functions ============\\n\\n    /**\\n     * @notice Returns the price of the underlying asset relative to the margin token.\\n     *\\n     * @return The price as a fixed-point number with 18 decimals.\\n     */\\n    function getPrice()\\n        external\\n        view\\n        returns (uint256)\\n    {\\n        // get the oracle address to read from\\n        address oracle = _ROUTER_[msg.sender];\\n\\n        // revert if no oracle found\\n        require(\\n            oracle != address(0),\\n            \\\"Sender not authorized to get price\\\"\\n        );\\n\\n        // get adjustment or default to 1\\n        uint256 adjustment = _ADJUSTMENTS_[oracle];\\n        if (adjustment == 0) {\\n            adjustment = BaseMath.base();\\n        }\\n\\n        // get the adjusted price\\n        uint256 rawPrice = uint256(I_MakerOracle(oracle).read());\\n        uint256 result = rawPrice.baseMul(adjustment);\\n\\n        // revert if invalid price\\n        require(\\n            result != 0,\\n            \\\"Oracle would return zero price\\\"\\n        );\\n\\n        return result;\\n    }\\n\\n    // ============ Admin Functions ============\\n\\n    /**\\n     * @dev Allows the owner to set a route for a particular sender.\\n     *\\n     * @param  sender The sender to set the route for.\\n     * @param  oracle The oracle to route the sender to.\\n     */\\n    function setRoute(\\n        address sender,\\n        address oracle\\n    )\\n        external\\n        onlyOwner\\n    {\\n        _ROUTER_[sender] = oracle;\\n        emit LogRouteSet(sender, oracle);\\n    }\\n\\n    /**\\n     * @dev Allows the owner to set an adjustment to an oracle source.\\n     *\\n     * @param  oracle     The oracle to apply the adjustment to.\\n     * @param  adjustment The adjustment to set when reading from the oracle.\\n     */\\n    function setAdjustment(\\n        address oracle,\\n        uint256 adjustment\\n    )\\n        external\\n        onlyOwner\\n    {\\n        _ADJUSTMENTS_[oracle] = adjustment;\\n        emit LogAdjustmentSet(oracle, adjustment);\\n    }\\n}\\n\",\"keccak256\":\"0x9eaf248c0602db19513913a3d8c0152860e0bcb6a1132cea5ec80d1e655d1d32\"}},\"version\":1}",
+  "bytecode": "0x608060405260006100176001600160e01b0361006616565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a35061006a565b3390565b6109d6806100796000396000f3fe608060405234801561001057600080fd5b50600436106100a35760003560e01c80638f32d59b11610076578063ca670a7a1161005b578063ca670a7a14610120578063f2fde38b14610133578063f77b3a1714610146576100a3565b80638f32d59b1461010357806398d5fdca14610118576100a3565b80630505e94d146100a857806346fb89ce146100bd578063715018a6146100e65780638da5cb5b146100ee575b600080fd5b6100bb6100b636600461064c565b610159565b005b6100d06100cb366004610626565b6101ff565b6040516100dd9190610902565b60405180910390f35b6100bb610211565b6100f661028c565b6040516100dd9190610885565b61010b61029b565b6040516100dd9190610893565b6100d06102bf565b6100f661012e366004610626565b6103cc565b6100bb610141366004610626565b6103e7565b6100bb610154366004610686565b610417565b61016161029b565b6101865760405162461bcd60e51b815260040161017d906108e2565b60405180910390fd5b6001600160a01b0382811660008181526001602052604090819020805473ffffffffffffffffffffffffffffffffffffffff19169385169390931790925590517f16f50a0fb14e340612b259bd02dedc506aae22cf39d7215c0b8d5e85030e87b3906101f3908490610885565b60405180910390a25050565b60026020526000908152604090205481565b61021961029b565b6102355760405162461bcd60e51b815260040161017d906108e2565b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b6000546001600160a01b031690565b600080546001600160a01b03166102b0610486565b6001600160a01b031614905090565b336000908152600160205260408120546001600160a01b0316806102f55760405162461bcd60e51b815260040161017d906108f2565b6001600160a01b0381166000908152600260205260409020548061031e5761031b61048a565b90505b6000826001600160a01b03166357de26a46040518163ffffffff1660e01b815260040160206040518083038186803b15801561035957600080fd5b505afa15801561036d573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525061039191908101906106b6565b905060006103a5828463ffffffff61049616565b9050806103c45760405162461bcd60e51b815260040161017d906108c2565b935050505090565b6001602052600090815260409020546001600160a01b031681565b6103ef61029b565b61040b5760405162461bcd60e51b815260040161017d906108e2565b610414816104c9565b50565b61041f61029b565b61043b5760405162461bcd60e51b815260040161017d906108e2565b6001600160a01b03821660008181526002602052604090819020839055517f6a5ac74b5033ae621af6e2a1a99689adfe6563e782629d2b76aad70664178e21906101f3908490610902565b3390565b670de0b6b3a764000090565b60006104c0670de0b6b3a76400006104b4858563ffffffff61055716565b9063ffffffff61059116565b90505b92915050565b6001600160a01b0381166104ef5760405162461bcd60e51b815260040161017d906108b2565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff19166001600160a01b0392909216919091179055565b600082610566575060006104c3565b8282028284828161057357fe5b04146104c05760405162461bcd60e51b815260040161017d906108d2565b60006104c083836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250600081836105ef5760405162461bcd60e51b815260040161017d91906108a1565b5060008385816105fb57fe5b0495945050505050565b80356104c381610976565b80516104c38161098a565b80356104c38161098a565b60006020828403121561063857600080fd5b60006106448484610605565b949350505050565b6000806040838503121561065f57600080fd5b600061066b8585610605565b925050602061067c85828601610605565b9150509250929050565b6000806040838503121561069957600080fd5b60006106a58585610605565b925050602061067c8582860161061b565b6000602082840312156106c857600080fd5b60006106448484610610565b6106dd8161091d565b82525050565b6106dd81610928565b60006106f782610910565b6107018185610914565b935061071181856020860161093c565b61071a8161096c565b9093019392505050565b6000610731602683610914565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206181527f6464726573730000000000000000000000000000000000000000000000000000602082015260400192915050565b6000610790601e83610914565b7f4f7261636c6520776f756c642072657475726e207a65726f2070726963650000815260200192915050565b60006107c9602183610914565b7f536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f8152607760f81b602082015260400192915050565b600061080c602083610914565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572815260200192915050565b6000610845602283610914565b7f53656e646572206e6f7420617574686f72697a656420746f2067657420707269815261636560f01b602082015260400192915050565b6106dd8161092d565b602081016104c382846106d4565b602081016104c382846106e3565b602080825281016104c081846106ec565b602080825281016104c381610724565b602080825281016104c381610783565b602080825281016104c3816107bc565b602080825281016104c3816107ff565b602080825281016104c381610838565b602081016104c3828461087c565b5190565b90815260200190565b60006104c382610930565b151590565b90565b6001600160a01b031690565b60005b8381101561095757818101518382015260200161093f565b83811115610966576000848401525b50505050565b601f01601f191690565b61097f8161091d565b811461041457600080fd5b61097f8161092d56fea365627a7a72315820d3fd6749a4f675f4f9a9c74c34c0788c3100907f23e860581bf240cbc9ed76726c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100a35760003560e01c80638f32d59b11610076578063ca670a7a1161005b578063ca670a7a14610120578063f2fde38b14610133578063f77b3a1714610146576100a3565b80638f32d59b1461010357806398d5fdca14610118576100a3565b80630505e94d146100a857806346fb89ce146100bd578063715018a6146100e65780638da5cb5b146100ee575b600080fd5b6100bb6100b636600461064c565b610159565b005b6100d06100cb366004610626565b6101ff565b6040516100dd9190610902565b60405180910390f35b6100bb610211565b6100f661028c565b6040516100dd9190610885565b61010b61029b565b6040516100dd9190610893565b6100d06102bf565b6100f661012e366004610626565b6103cc565b6100bb610141366004610626565b6103e7565b6100bb610154366004610686565b610417565b61016161029b565b6101865760405162461bcd60e51b815260040161017d906108e2565b60405180910390fd5b6001600160a01b0382811660008181526001602052604090819020805473ffffffffffffffffffffffffffffffffffffffff19169385169390931790925590517f16f50a0fb14e340612b259bd02dedc506aae22cf39d7215c0b8d5e85030e87b3906101f3908490610885565b60405180910390a25050565b60026020526000908152604090205481565b61021961029b565b6102355760405162461bcd60e51b815260040161017d906108e2565b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b6000546001600160a01b031690565b600080546001600160a01b03166102b0610486565b6001600160a01b031614905090565b336000908152600160205260408120546001600160a01b0316806102f55760405162461bcd60e51b815260040161017d906108f2565b6001600160a01b0381166000908152600260205260409020548061031e5761031b61048a565b90505b6000826001600160a01b03166357de26a46040518163ffffffff1660e01b815260040160206040518083038186803b15801561035957600080fd5b505afa15801561036d573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525061039191908101906106b6565b905060006103a5828463ffffffff61049616565b9050806103c45760405162461bcd60e51b815260040161017d906108c2565b935050505090565b6001602052600090815260409020546001600160a01b031681565b6103ef61029b565b61040b5760405162461bcd60e51b815260040161017d906108e2565b610414816104c9565b50565b61041f61029b565b61043b5760405162461bcd60e51b815260040161017d906108e2565b6001600160a01b03821660008181526002602052604090819020839055517f6a5ac74b5033ae621af6e2a1a99689adfe6563e782629d2b76aad70664178e21906101f3908490610902565b3390565b670de0b6b3a764000090565b60006104c0670de0b6b3a76400006104b4858563ffffffff61055716565b9063ffffffff61059116565b90505b92915050565b6001600160a01b0381166104ef5760405162461bcd60e51b815260040161017d906108b2565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff19166001600160a01b0392909216919091179055565b600082610566575060006104c3565b8282028284828161057357fe5b04146104c05760405162461bcd60e51b815260040161017d906108d2565b60006104c083836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250600081836105ef5760405162461bcd60e51b815260040161017d91906108a1565b5060008385816105fb57fe5b0495945050505050565b80356104c381610976565b80516104c38161098a565b80356104c38161098a565b60006020828403121561063857600080fd5b60006106448484610605565b949350505050565b6000806040838503121561065f57600080fd5b600061066b8585610605565b925050602061067c85828601610605565b9150509250929050565b6000806040838503121561069957600080fd5b60006106a58585610605565b925050602061067c8582860161061b565b6000602082840312156106c857600080fd5b60006106448484610610565b6106dd8161091d565b82525050565b6106dd81610928565b60006106f782610910565b6107018185610914565b935061071181856020860161093c565b61071a8161096c565b9093019392505050565b6000610731602683610914565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206181527f6464726573730000000000000000000000000000000000000000000000000000602082015260400192915050565b6000610790601e83610914565b7f4f7261636c6520776f756c642072657475726e207a65726f2070726963650000815260200192915050565b60006107c9602183610914565b7f536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f8152607760f81b602082015260400192915050565b600061080c602083610914565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572815260200192915050565b6000610845602283610914565b7f53656e646572206e6f7420617574686f72697a656420746f2067657420707269815261636560f01b602082015260400192915050565b6106dd8161092d565b602081016104c382846106d4565b602081016104c382846106e3565b602080825281016104c081846106ec565b602080825281016104c381610724565b602080825281016104c381610783565b602080825281016104c3816107bc565b602080825281016104c3816107ff565b602080825281016104c381610838565b602081016104c3828461087c565b5190565b90815260200190565b60006104c382610930565b151590565b90565b6001600160a01b031690565b60005b8381101561095757818101518382015260200161093f565b83811115610966576000848401525b50505050565b601f01601f191690565b61097f8161091d565b811461041457600080fd5b61097f8161092d56fea365627a7a72315820d3fd6749a4f675f4f9a9c74c34c0788c3100907f23e860581bf240cbc9ed76726c6578706572696d656e74616cf564736f6c63430005100040",
+  "devdoc": {
+    "author": "axor",
+    "methods": {
+      "getPrice()": {
+        "return": "The price as a fixed-point number with 18 decimals."
+      },
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "setAdjustment(address,uint256)": {
+        "details": "Allows the owner to set an adjustment to an oracle source.",
+        "params": {
+          "adjustment": "The adjustment to set when reading from the oracle.",
+          "oracle": "The oracle to apply the adjustment to."
+        }
+      },
+      "setRoute(address,address)": {
+        "details": "Allows the owner to set a route for a particular sender.",
+        "params": {
+          "oracle": "The oracle to route the sender to.",
+          "sender": "The sender to set the route for."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "P1MakerOracle"
+  },
+  "userdoc": {
+    "methods": {
+      "getPrice()": {
+        "notice": "Returns the price of the underlying asset relative to the margin token."
+      }
+    },
+    "notice": "P1Oracle that reads the price from a Maker V2 Oracle."
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 220,
+        "contract": "contracts/protocol/v1/oracles/P1MakerOracle.sol:P1MakerOracle",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 5827,
+        "contract": "contracts/protocol/v1/oracles/P1MakerOracle.sol:P1MakerOracle",
+        "label": "_ROUTER_",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_address)"
+      },
+      {
+        "astId": 5831,
+        "contract": "contracts/protocol/v1/oracles/P1MakerOracle.sol:P1MakerOracle",
+        "label": "_ADJUSTMENTS_",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_address)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

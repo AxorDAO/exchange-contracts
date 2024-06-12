@@ -1,0 +1,464 @@
+{
+  "address": "0x39B45d022D44412f0349816a94fDC5e1845e2484",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "TRADER_FLAG_RESULT_2",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_FUNDING_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_FUNDING_IS_POSITIVE_",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_PRICE_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_TRADE_RESULT_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "marginAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "positionAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isBuy",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "traderFlags",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_TRADE_RESULT_2_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "marginAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "positionAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isBuy",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "traderFlags",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFunding",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isPositive",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newFunding",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFunding",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPrice",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "marginAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "positionAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isBuy",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "traderFlags",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setSecondTradeResult",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "marginAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "positionAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isBuy",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "traderFlags",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setTradeResult",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "traderFlags",
+          "type": "bytes32"
+        }
+      ],
+      "name": "trade",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "marginAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "positionAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isBuy",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "traderFlags",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct P1Types.TradeResult",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x28eb0d550b791087c54becda51525dd01bccb248a35855174aa448de31a95d79",
+  "receipt": {
+    "to": null,
+    "from": "0x4962E92A79e26ce75Da38Ddb2F2aa5f46C83e522",
+    "contractAddress": "0x39B45d022D44412f0349816a94fDC5e1845e2484",
+    "transactionIndex": 1,
+    "gasUsed": "657481",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xb5c96c01768dd94d32de3943e2c5da09055eb6d8c17318c18088f4e411e17561",
+    "transactionHash": "0x28eb0d550b791087c54becda51525dd01bccb248a35855174aa448de31a95d79",
+    "logs": [],
+    "blockNumber": 25656939,
+    "cumulativeGasUsed": "657481",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "d8a4bed0d8259721c6e731840c9f1c4e",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"TRADER_FLAG_RESULT_2\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_FUNDING_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_FUNDING_IS_POSITIVE_\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_PRICE_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_TRADE_RESULT_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"marginAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"positionAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isBuy\",\"type\":\"bool\"},{\"internalType\":\"bytes32\",\"name\":\"traderFlags\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_TRADE_RESULT_2_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"marginAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"positionAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isBuy\",\"type\":\"bool\"},{\"internalType\":\"bytes32\",\"name\":\"traderFlags\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"getFunding\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isPositive\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"newFunding\",\"type\":\"uint256\"}],\"name\":\"setFunding\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newPrice\",\"type\":\"uint256\"}],\"name\":\"setPrice\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"marginAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"positionAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isBuy\",\"type\":\"bool\"},{\"internalType\":\"bytes32\",\"name\":\"traderFlags\",\"type\":\"bytes32\"}],\"name\":\"setSecondTradeResult\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"marginAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"positionAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isBuy\",\"type\":\"bool\"},{\"internalType\":\"bytes32\",\"name\":\"traderFlags\",\"type\":\"bytes32\"}],\"name\":\"setTradeResult\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"traderFlags\",\"type\":\"bytes32\"}],\"name\":\"trade\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"marginAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"positionAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isBuy\",\"type\":\"bool\"},{\"internalType\":\"bytes32\",\"name\":\"traderFlags\",\"type\":\"bytes32\"}],\"internalType\":\"struct P1Types.TradeResult\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"axor\",\"methods\":{},\"title\":\"Test_P1Monolith\"},\"userdoc\":{\"methods\":{\"setSecondTradeResult(uint256,uint256,bool,bytes32)\":{\"notice\":\"Sets a second trade result which can be triggered by the trader flags of the first trade.\"}},\"notice\":\"A second contract for testing the funder, oracle, and trader.\"}},\"settings\":{\"compilationTarget\":{\"contracts/test/v1/Test_P1Monolith.sol\":\"Test_P1Monolith\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/protocol/v1/intf/I_P1Funder.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_P1Funder\\n * @author axor\\n *\\n * @notice Interface for an oracle providing the funding rate for a perpetual market.\\n */\\ninterface I_P1Funder {\\n\\n    /**\\n     * @notice Calculates the signed funding amount that has accumulated over a period of time.\\n     *\\n     * @param  timeDelta  Number of seconds over which to calculate the accumulated funding amount.\\n     * @return            True if the funding rate is positive, and false otherwise.\\n     * @return            The funding amount as a unitless rate, represented as a fixed-point number\\n     *                    with 18 decimals.\\n     */\\n    function getFunding(\\n        uint256 timeDelta\\n    )\\n        external\\n        view\\n        returns (bool, uint256);\\n}\\n\",\"keccak256\":\"0x09fcc8fb1894efa2b75112ebc875aa0f4e5cb8da55044b2f9d3d813af6b9cd31\"},\"contracts/protocol/v1/intf/I_P1Oracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_P1Oracle\\n * @author axor\\n *\\n * @notice Interface that PerpetualV1 Price Oracles must implement.\\n */\\ninterface I_P1Oracle {\\n\\n    /**\\n     * @notice Returns the price of the underlying asset relative to the margin token.\\n     *\\n     * @return The price as a fixed-point number with 18 decimals.\\n     */\\n    function getPrice()\\n        external\\n        view\\n        returns (uint256);\\n}\\n\",\"keccak256\":\"0xc5b4c8b57eb0b7156086eaa8ed394f72bbfa2e879ac805096a7b6cf6799b43ef\"},\"contracts/protocol/v1/intf/I_P1Trader.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { P1Types } from \\\"../lib/P1Types.sol\\\";\\n\\n\\n/**\\n * @title I_P1Trader\\n * @author axor\\n *\\n * @notice Interface that PerpetualV1 Traders must implement.\\n */\\ninterface I_P1Trader {\\n\\n    /**\\n     * @notice Returns the result of the trade between the maker and the taker. Expected to be\\n     *  called by PerpetualV1. Reverts if the trade is disallowed.\\n     *\\n     * @param  sender       The address that called the `trade()` function of PerpetualV1.\\n     * @param  maker        The address of the passive maker account.\\n     * @param  taker        The address of the active taker account.\\n     * @param  price        The current oracle price of the underlying asset.\\n     * @param  data         Arbitrary data passed in to the `trade()` function of PerpetualV1.\\n     * @param  traderFlags  Any flags that have been set by other I_P1Trader contracts during the\\n     *                      same call to the `trade()` function of PerpetualV1.\\n     * @return              The result of the trade from the perspective of the taker.\\n     */\\n    function trade(\\n        address sender,\\n        address maker,\\n        address taker,\\n        uint256 price,\\n        bytes calldata data,\\n        bytes32 traderFlags\\n    )\\n        external\\n        returns (P1Types.TradeResult memory);\\n}\\n\",\"keccak256\":\"0xaa67cb3582dfb62104f6b94280ccac3018719a310b124ed282d47bc82efb42c3\"},\"contracts/protocol/v1/lib/P1Types.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title P1Types\\n * @author axor\\n *\\n * @dev Library for common types used in PerpetualV1 contracts.\\n */\\nlibrary P1Types {\\n    // ============ Structs ============\\n\\n    /**\\n     * @dev Used to represent the global index and each account's cached index.\\n     *  Used to settle funding paymennts on a per-account basis.\\n     */\\n    struct Index {\\n        uint32 timestamp;\\n        bool isPositive;\\n        uint128 value;\\n    }\\n\\n    /**\\n     * @dev Used to track the signed margin balance and position balance values for each account.\\n     */\\n    struct Balance {\\n        bool marginIsPositive;\\n        bool positionIsPositive;\\n        uint120 margin;\\n        uint120 position;\\n    }\\n\\n    /**\\n     * @dev Used to cache commonly-used variables that are relatively gas-intensive to obtain.\\n     */\\n    struct Context {\\n        uint256 price;\\n        uint256 minCollateral;\\n        Index index;\\n    }\\n\\n    /**\\n     * @dev Used by contracts implementing the I_P1Trader interface to return the result of a trade.\\n     */\\n    struct TradeResult {\\n        uint256 marginAmount;\\n        uint256 positionAmount;\\n        bool isBuy; // From taker's perspective.\\n        bytes32 traderFlags;\\n    }\\n}\\n\",\"keccak256\":\"0x31f6c089ca233eff543e6587d4e6e159e1ccf5d3b4ec14552d18d1cfb360d18e\"},\"contracts/test/v1/Test_P1Funder.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { I_P1Funder } from \\\"../../protocol/v1/intf/I_P1Funder.sol\\\";\\n\\n\\n/**\\n * @title Test_P1Funder\\n * @author axor\\n *\\n * @notice I_P1Funder implementation for testing.\\n */\\n/* solium-disable-next-line camelcase */\\ncontract Test_P1Funder is\\n    I_P1Funder\\n{\\n    bool public _FUNDING_IS_POSITIVE_ = true;\\n    uint256 public _FUNDING_ = 0;\\n\\n    function getFunding(\\n        uint256 // timeDelta\\n    )\\n        external\\n        view\\n        returns (bool, uint256)\\n    {\\n        return (_FUNDING_IS_POSITIVE_, _FUNDING_);\\n    }\\n\\n    function setFunding(\\n        bool isPositive,\\n        uint256 newFunding\\n    )\\n        external\\n    {\\n        _FUNDING_IS_POSITIVE_ = isPositive;\\n        _FUNDING_ = newFunding;\\n    }\\n}\\n\",\"keccak256\":\"0xcfcbe412ba3a990abc9bec68680aeb272fff5ddc67549745f935b2f95713332e\"},\"contracts/test/v1/Test_P1Monolith.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { Test_P1Funder } from \\\"./Test_P1Funder.sol\\\";\\nimport { Test_P1Oracle } from \\\"./Test_P1Oracle.sol\\\";\\nimport { Test_P1Trader } from \\\"./Test_P1Trader.sol\\\";\\n\\n\\n/**\\n * @title Test_P1Monolith\\n * @author axor\\n *\\n * @notice A second contract for testing the funder, oracle, and trader.\\n */\\n/* solium-disable-next-line camelcase, no-empty-blocks */\\ncontract Test_P1Monolith is\\n    Test_P1Funder,\\n    Test_P1Oracle,\\n    Test_P1Trader\\n{}\\n\",\"keccak256\":\"0x1a1ff03bb3c247207feb9989f2a45872c2da3126371a60cf69ed142f9e9deb73\"},\"contracts/test/v1/Test_P1Oracle.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { I_P1Oracle } from \\\"../../protocol/v1/intf/I_P1Oracle.sol\\\";\\n\\n\\n/**\\n * @title Test_P1Oracle\\n * @author axor\\n *\\n * @notice I_P1Oracle implementation for testing.\\n */\\n/* solium-disable-next-line camelcase */\\ncontract Test_P1Oracle is\\n    I_P1Oracle\\n{\\n    uint256 public _PRICE_ = 0;\\n\\n    function getPrice()\\n        external\\n        view\\n        returns (uint256)\\n    {\\n        return _PRICE_;\\n    }\\n\\n    function setPrice(\\n        uint256 newPrice\\n    )\\n        external\\n    {\\n        _PRICE_ = newPrice;\\n    }\\n}\\n\",\"keccak256\":\"0x2d5fdeff79611df1a04e9bccd2e7d2f659d6d36ab06bd78db52f93ed8cd86bb2\"},\"contracts/test/v1/Test_P1Trader.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { I_P1Trader } from \\\"../../protocol/v1/intf/I_P1Trader.sol\\\";\\nimport { P1Types } from \\\"../../protocol/v1/lib/P1Types.sol\\\";\\n\\n\\n/**\\n * @title Test_P1Trader\\n * @author axor\\n *\\n * @notice I_P1Trader implementation for testing.\\n */\\n/* solium-disable-next-line camelcase */\\ncontract Test_P1Trader is\\n    I_P1Trader\\n{\\n    P1Types.TradeResult public _TRADE_RESULT_;\\n    P1Types.TradeResult public _TRADE_RESULT_2_;\\n\\n    // Special testing-only trader flag that will cause the second result to be returned.\\n    bytes32 constant public TRADER_FLAG_RESULT_2 = bytes32(~uint256(0));\\n\\n    function trade(\\n        address, // sender\\n        address, // maker\\n        address, // taker\\n        uint256, // price\\n        bytes calldata, // data\\n        bytes32 traderFlags\\n    )\\n        external\\n        returns (P1Types.TradeResult memory)\\n    {\\n        if (traderFlags == TRADER_FLAG_RESULT_2) {\\n            return _TRADE_RESULT_2_;\\n        }\\n        return _TRADE_RESULT_;\\n    }\\n\\n    function setTradeResult(\\n        uint256 marginAmount,\\n        uint256 positionAmount,\\n        bool isBuy,\\n        bytes32 traderFlags\\n    )\\n        external\\n    {\\n        _TRADE_RESULT_ = P1Types.TradeResult({\\n            marginAmount: marginAmount,\\n            positionAmount: positionAmount,\\n            isBuy: isBuy,\\n            traderFlags: traderFlags\\n        });\\n    }\\n\\n    /**\\n     * Sets a second trade result which can be triggered by the trader flags of the first trade.\\n     */\\n    function setSecondTradeResult(\\n        uint256 marginAmount,\\n        uint256 positionAmount,\\n        bool isBuy,\\n        bytes32 traderFlags\\n    )\\n        external\\n    {\\n        _TRADE_RESULT_2_ = P1Types.TradeResult({\\n            marginAmount: marginAmount,\\n            positionAmount: positionAmount,\\n            isBuy: isBuy,\\n            traderFlags: traderFlags\\n        });\\n    }\\n}\\n\",\"keccak256\":\"0xfe753915beb29d08f0ee193de299cb635181c349f0fec32087aad0c95d01d507\"}},\"version\":1}",
+  "bytecode": "0x60806040526000805460ff19166001908117825581905560025534801561002557600080fd5b506106e2806100356000396000f3fe608060405234801561001057600080fd5b50600436106100df5760003560e01c806391b7f5ed1161008c5780639f5cf46a116100665780639f5cf46a1461018f578063e41a054f14610197578063e53adbb2146101aa578063ebed4bd4146101bd576100df565b806391b7f5ed14610154578063970c2ba11461016757806398d5fdca14610187576100df565b80636d2c6021116100bd5780636d2c60211461012f57806375092a3014610137578063910fb0731461013f576100df565b8063495f9bff146100e45780634993cc3b1461010557806363a3d85f1461011a575b600080fd5b6100ec6101de565b6040516100fc949392919061060c565b60405180910390f35b61010d6101f3565b6040516100fc91906105f0565b61012d6101283660046104f7565b6101f9565b005b61010d61023c565b6100ec610242565b610147610257565b6040516100fc91906105c0565b61012d6101623660046104d1565b610260565b61017a6101753660046103f2565b610265565b6040516100fc91906105fe565b61010d6102e6565b61010d6102ec565b61012d6101a5366004610497565b6102f2565b61012d6101b83660046104f7565b610309565b6101d06101cb3660046104d1565b61034c565b6040516100fc9291906105ce565b60035460045460055460065460ff9091169084565b60015481565b604080516080810182528581526020810185905292151590830181905260609092018190526007939093556008919091556009805460ff19169091179055600a55565b60001981565b600754600854600954600a5460ff9091169084565b60005460ff1681565b600255565b61026d61035b565b6000198214156102ab5750604080516080810182526007548152600854602082015260095460ff16151591810191909152600a5460608201526102db565b50604080516080810182526003548152600454602082015260055460ff1615159181019190915260065460608201525b979650505050505050565b60025490565b60025481565b6000805460ff191692151592909217909155600155565b604080516080810182528581526020810185905292151590830181905260609092018190526003939093556004919091556005805460ff19169091179055600655565b5060005460015460ff90911691565b60408051608081018252600080825260208201819052918101829052606081019190915290565b803561038d81610676565b92915050565b803561038d8161068d565b803561038d81610696565b60008083601f8401126103bb57600080fd5b50813567ffffffffffffffff8111156103d357600080fd5b6020830191508360018202830111156103eb57600080fd5b9250929050565b600080600080600080600060c0888a03121561040d57600080fd5b60006104198a8a610382565b975050602061042a8a828b01610382565b965050604061043b8a828b01610382565b955050606061044c8a828b0161039e565b945050608088013567ffffffffffffffff81111561046957600080fd5b6104758a828b016103a9565b935093505060a06104888a828b0161039e565b91505092959891949750929550565b600080604083850312156104aa57600080fd5b60006104b68585610393565b92505060206104c78582860161039e565b9150509250929050565b6000602082840312156104e357600080fd5b60006104ef848461039e565b949350505050565b6000806000806080858703121561050d57600080fd5b6000610519878761039e565b945050602061052a8782880161039e565b935050604061053b87828801610393565b925050606061054c8782880161039e565b91505092959194509250565b61056181610655565b82525050565b6105618161065a565b805160808301906105818482610567565b5060208201516105946020850182610567565b5060408201516105a76040850182610558565b5060608201516105ba6060850182610567565b50505050565b6020810161038d8284610558565b604081016105dc8285610558565b6105e96020830184610567565b9392505050565b6020810161038d8284610567565b6080810161038d8284610570565b6080810161061a8287610567565b6106276020830186610567565b6106346040830185610558565b6106416060830184610567565b95945050505050565b600061038d8261065d565b151590565b90565b73ffffffffffffffffffffffffffffffffffffffff1690565b61067f8161064a565b811461068a57600080fd5b50565b61067f81610655565b61067f8161065a56fea365627a7a723158202e7e85acc1856fc8775a3b9f5a23d5825d770dd3b08693d23271d37ad4c95a476c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100df5760003560e01c806391b7f5ed1161008c5780639f5cf46a116100665780639f5cf46a1461018f578063e41a054f14610197578063e53adbb2146101aa578063ebed4bd4146101bd576100df565b806391b7f5ed14610154578063970c2ba11461016757806398d5fdca14610187576100df565b80636d2c6021116100bd5780636d2c60211461012f57806375092a3014610137578063910fb0731461013f576100df565b8063495f9bff146100e45780634993cc3b1461010557806363a3d85f1461011a575b600080fd5b6100ec6101de565b6040516100fc949392919061060c565b60405180910390f35b61010d6101f3565b6040516100fc91906105f0565b61012d6101283660046104f7565b6101f9565b005b61010d61023c565b6100ec610242565b610147610257565b6040516100fc91906105c0565b61012d6101623660046104d1565b610260565b61017a6101753660046103f2565b610265565b6040516100fc91906105fe565b61010d6102e6565b61010d6102ec565b61012d6101a5366004610497565b6102f2565b61012d6101b83660046104f7565b610309565b6101d06101cb3660046104d1565b61034c565b6040516100fc9291906105ce565b60035460045460055460065460ff9091169084565b60015481565b604080516080810182528581526020810185905292151590830181905260609092018190526007939093556008919091556009805460ff19169091179055600a55565b60001981565b600754600854600954600a5460ff9091169084565b60005460ff1681565b600255565b61026d61035b565b6000198214156102ab5750604080516080810182526007548152600854602082015260095460ff16151591810191909152600a5460608201526102db565b50604080516080810182526003548152600454602082015260055460ff1615159181019190915260065460608201525b979650505050505050565b60025490565b60025481565b6000805460ff191692151592909217909155600155565b604080516080810182528581526020810185905292151590830181905260609092018190526003939093556004919091556005805460ff19169091179055600655565b5060005460015460ff90911691565b60408051608081018252600080825260208201819052918101829052606081019190915290565b803561038d81610676565b92915050565b803561038d8161068d565b803561038d81610696565b60008083601f8401126103bb57600080fd5b50813567ffffffffffffffff8111156103d357600080fd5b6020830191508360018202830111156103eb57600080fd5b9250929050565b600080600080600080600060c0888a03121561040d57600080fd5b60006104198a8a610382565b975050602061042a8a828b01610382565b965050604061043b8a828b01610382565b955050606061044c8a828b0161039e565b945050608088013567ffffffffffffffff81111561046957600080fd5b6104758a828b016103a9565b935093505060a06104888a828b0161039e565b91505092959891949750929550565b600080604083850312156104aa57600080fd5b60006104b68585610393565b92505060206104c78582860161039e565b9150509250929050565b6000602082840312156104e357600080fd5b60006104ef848461039e565b949350505050565b6000806000806080858703121561050d57600080fd5b6000610519878761039e565b945050602061052a8782880161039e565b935050604061053b87828801610393565b925050606061054c8782880161039e565b91505092959194509250565b61056181610655565b82525050565b6105618161065a565b805160808301906105818482610567565b5060208201516105946020850182610567565b5060408201516105a76040850182610558565b5060608201516105ba6060850182610567565b50505050565b6020810161038d8284610558565b604081016105dc8285610558565b6105e96020830184610567565b9392505050565b6020810161038d8284610567565b6080810161038d8284610570565b6080810161061a8287610567565b6106276020830186610567565b6106346040830185610558565b6106416060830184610567565b95945050505050565b600061038d8261065d565b151590565b90565b73ffffffffffffffffffffffffffffffffffffffff1690565b61067f8161064a565b811461068a57600080fd5b50565b61067f81610655565b61067f8161065a56fea365627a7a723158202e7e85acc1856fc8775a3b9f5a23d5825d770dd3b08693d23271d37ad4c95a476c6578706572696d656e74616cf564736f6c63430005100040",
+  "devdoc": {
+    "author": "axor",
+    "methods": {},
+    "title": "Test_P1Monolith"
+  },
+  "userdoc": {
+    "methods": {
+      "setSecondTradeResult(uint256,uint256,bool,bytes32)": {
+        "notice": "Sets a second trade result which can be triggered by the trader flags of the first trade."
+      }
+    },
+    "notice": "A second contract for testing the funder, oracle, and trader."
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8649,
+        "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+        "label": "_FUNDING_IS_POSITIVE_",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 8652,
+        "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+        "label": "_FUNDING_",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 8709,
+        "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+        "label": "_PRICE_",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 8739,
+        "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+        "label": "_TRADE_RESULT_",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_struct(TradeResult)5272_storage"
+      },
+      {
+        "astId": 8741,
+        "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+        "label": "_TRADE_RESULT_2_",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_struct(TradeResult)5272_storage"
+      }
+    ],
+    "types": {
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_struct(TradeResult)5272_storage": {
+        "encoding": "inplace",
+        "label": "struct P1Types.TradeResult",
+        "members": [
+          {
+            "astId": 5265,
+            "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+            "label": "marginAmount",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5267,
+            "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+            "label": "positionAmount",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5269,
+            "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+            "label": "isBuy",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bool"
+          },
+          {
+            "astId": 5271,
+            "contract": "contracts/test/v1/Test_P1Monolith.sol:Test_P1Monolith",
+            "label": "traderFlags",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bytes32"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -25,6 +25,10 @@ export async function sell(
   return trade(ctx, taker, maker, position, cost, false);
 }
 
+// uint256[] memory settlementAmounts,
+//         bool[] memory settlementIsPositives,
+//         uint256 price // to update global index
+
 export async function trade(
   ctx: ITestContext,
   taker: address,
@@ -32,6 +36,9 @@ export async function trade(
   position: BigNumberable,
   cost: BigNumberable,
   isBuy: boolean,
+  settlementAmounts: BigNumberable,
+  settlementIsPositives: boolean,
+  price: BigNumberable
 ): Promise<TxResult> {
   await ctx.perpetual.testing.trader.setTradeResult({
     isBuy,
@@ -50,5 +57,8 @@ export async function trade(
         data: '0x00',
       },
     ],
+    [settlementAmounts],
+    [settlementIsPositives],
+    price,
   );
 }

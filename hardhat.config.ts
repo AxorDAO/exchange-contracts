@@ -1,13 +1,28 @@
 import '@nomicfoundation/hardhat-toolbox';
+// import "@nomiclabs/hardhat-waffle";
+// import "@nomiclabs/hardhat-etherscan";
+// import "@typechain/hardhat";
+import { config as dotEnvConfig } from "dotenv";
+// import { readdirSync } from "fs";
+// import "hardhat-contract-sizer";
+// import "hardhat-deploy";
 import 'hardhat-deploy';
 import { vars, HardhatUserConfig } from 'hardhat/config';
 import { NetworkUserConfig } from 'hardhat/types';
 import '@nomiclabs/hardhat-web3';
+dotEnvConfig();
+
+import "./tasks/accounts";
+import "./tasks/margin";
+import "./tasks/init";
+import "./tasks/trade";
+
 
 // Run 'npx hardhat vars setup' to see the list of variables that need to be set
 
-const privateKey = ''; // 992725....
-const privateKey1 = ''; // 992725....
+const privateKey = process.env.PVK; // 992725....
+console.log("🚀 ~ privateKey:", privateKey)
+const privateKey1 = process.env.PVK_GNC; // 992725....
 const infuraApiKey: string = 'INFURA_API_KEY';
 
 const chainIds = {
@@ -22,7 +37,9 @@ const chainIds = {
   'polygon-mumbai': 80001,
   sepolia: 11155111,
   bsctestnet: 97,
+  arb: 421614
 };
+
 
 function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
   let jsonRpcUrl: string;
@@ -35,6 +52,13 @@ function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
       break;
     case 'bsctestnet':
       jsonRpcUrl = 'https://bsc-testnet.publicnode.com	';
+      break;
+    case 'arb':
+      jsonRpcUrl = 'https://sepolia-rollup.arbitrum.io/rpc	';
+      break;
+
+    case 'arbitrum-mainnet':
+      jsonRpcUrl = 'https://arbitrum.blockpi.network/v1/rpc/public';
       break;
     default:
       // tslint:disable-next-line:prefer-template
@@ -62,7 +86,18 @@ const config: HardhatUserConfig = {
       polygon: vars.get('POLYGONSCAN_API_KEY', ''),
       polygonMumbai: vars.get('POLYGONSCAN_API_KEY', ''),
       sepolia: vars.get('ETHERSCAN_API_KEY', ''),
+      arbsepolia: "89ZPWUKVNGY13JPGAH5TFVADAAI8N53S9F",
     },
+    customChains: [
+      {
+        network: 'arbsepolia',
+        chainId: 421614,
+        urls: {
+          apiURL: 'https://api-sepolia.arbiscan.io/api',
+          browserURL: 'https://sepolia.arbiscan.io/',
+        }
+      }
+    ]
   },
   gasReporter: {
     currency: 'USD',
@@ -91,28 +126,63 @@ const config: HardhatUserConfig = {
     'polygon-mumbai': getChainConfig('polygon-mumbai'),
     sepolia: getChainConfig('sepolia'),
     bsctestnet: getChainConfig('bsctestnet'),
+    bsctest: getChainConfig('bsctestnet'),
+    bsctest2: getChainConfig('bsctestnet'),
+    bsctest3: getChainConfig('bsctestnet'),
+    bsctest4: getChainConfig('bsctestnet'),
+    bsctest5: getChainConfig('bsctestnet'),
+    arb: getChainConfig('arb'),
+    arb1: getChainConfig('arb'),
+    arb2: getChainConfig('arb'),
+    arb3: getChainConfig('arb'),
+    arb4: getChainConfig('arb'),
+    cdarb1: getChainConfig('arb'),
+    cdarb2: getChainConfig('arb'),
+    cdarb3: getChainConfig('arb'),
+    cdarb4: getChainConfig('arb'),
+    ctarb1: getChainConfig('arb'),
+    ctarb2: getChainConfig('arb'),
+    ctarb3: getChainConfig('arb'),
+    ctarb4: getChainConfig('arb'),
+    ctarbxxx: getChainConfig('arb'),
+    ctarbx: getChainConfig('arb'),
+    a1: getChainConfig('arb'),
   },
   paths: {
     artifacts: './artifacts',
     cache: './cache',
     sources: './contracts',
-    tests: './test',
+    tests: './test/axor',
   },
   solidity: {
-    version: '0.5.16',
-    settings: {
-      // Disable the optimizer when debugging
-      // https://hardhat.org/hardhat-network/#solidity-optimizer-support
-      optimizer: {
-        enabled: true,
-        runs: 800,
+    compilers:
+    [
+      {
+        version: '0.5.16',
+        settings: {
+          // Disable the optimizer when debugging
+          // https://hardhat.org/hardhat-network/#solidity-optimizer-support
+          optimizer: {
+            enabled: true,
+            runs: 800,
+          },
+        },
       },
-    },
+      {
+        version: "0.8.3",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 800,
+          },
+        },
+      }
+    ]
   },
   typechain: {
     outDir: 'types',
     target: 'ethers-v6',
-  },
+  }
 };
 
 export default config;

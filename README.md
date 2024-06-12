@@ -28,14 +28,3 @@ Requires a running [docker](https://docker.com) engine.
 ```
   npm test
 ```
-
-### Flatten contracts  :
-
-1. Install depencency tool for flatten contract 
-```
-sudo npm install -g sol-merger
-```
-2. Run script flatten all smart contracts 
-
-```
-node flatten.js

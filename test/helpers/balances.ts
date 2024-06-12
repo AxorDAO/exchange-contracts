@@ -4,6 +4,7 @@ import { ITestContext } from './perpetualDescribe';
 import { expectBN } from './Expect';
 import { INTEGERS } from '../../src/lib/Constants';
 import { address, Balance, BigNumberable, TxResult } from '../../src/lib/types';
+import { ethers } from "hardhat";
 
 export async function expectBalances(
   ctx: ITestContext,
@@ -139,10 +140,16 @@ export async function expectContractSurplus(
  */
 export async function mintAndDeposit(
   ctx: ITestContext,
+  from: address,
   account: address,
   amount: BigNumberable,
+  price: BigNumberable,
+  settlementAmounts: BigNumberable,
+  settlementIsPositives: boolean,
 ): Promise<void> {
   const amountBN = new BigNumber(amount);
+  const priceBN = new BigNumber(price);
+  const settlementBN = new BigNumber(settlementAmounts);
   await ctx.perpetual.testing.token.mint(
     ctx.perpetual.contracts.testToken.options.address,
     account,
@@ -152,7 +159,7 @@ export async function mintAndDeposit(
     ctx.perpetual.contracts.testToken.options.address,
     account,
   );
-  await ctx.perpetual.margin.deposit(account, amountBN, { from: account });
+  await ctx.perpetual.margin.deposit(from, account, amountBN, priceBN, settlementBN, settlementIsPositives);
 }
 
 function getBalanceEvents(
@@ -191,4 +198,10 @@ function getBalanceEvents(
     result[i] = balance;
   }
   return result;
+}
+
+export async function mineNBlocks(n) {
+  for (let index = 0; index < n; index++) {
+    await ethers.provider.send('evm_mine');
+  }
 }

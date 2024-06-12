@@ -1,0 +1,144 @@
+{
+  "address": "0xc8c149009E56cCAF83a25c58d6D7DF5c181eB4A3",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_FUNDING_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_FUNDING_IS_POSITIVE_",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFunding",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "isPositive",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newFunding",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFunding",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x56b9e4165b1038285793fafe4183f5bc9073995a0d467338236b1b2dc2b17ba9",
+  "receipt": {
+    "to": null,
+    "from": "0xC17278db94dc180d8B7680656cBe3051517ae6e8",
+    "contractAddress": "0xc8c149009E56cCAF83a25c58d6D7DF5c181eB4A3",
+    "transactionIndex": 1,
+    "gasUsed": "445851",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe6983bcd60051d0734f1c59766e8bdd5574fcf3c23c94c494ae5b3a1e96d62cc",
+    "transactionHash": "0x56b9e4165b1038285793fafe4183f5bc9073995a0d467338236b1b2dc2b17ba9",
+    "logs": [],
+    "blockNumber": 25054031,
+    "cumulativeGasUsed": "445851",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "d8a4bed0d8259721c6e731840c9f1c4e",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"_FUNDING_\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_FUNDING_IS_POSITIVE_\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"getFunding\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bool\",\"name\":\"isPositive\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"newFunding\",\"type\":\"uint256\"}],\"name\":\"setFunding\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"axor\",\"methods\":{},\"title\":\"Test_P1Funder\"},\"userdoc\":{\"methods\":{},\"notice\":\"I_P1Funder implementation for testing.\"}},\"settings\":{\"compilationTarget\":{\"contracts/test/v1/Test_P1Funder.sol\":\"Test_P1Funder\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/protocol/v1/intf/I_P1Funder.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\n\\n/**\\n * @title I_P1Funder\\n * @author axor\\n *\\n * @notice Interface for an oracle providing the funding rate for a perpetual market.\\n */\\ninterface I_P1Funder {\\n\\n    /**\\n     * @notice Calculates the signed funding amount that has accumulated over a period of time.\\n     *\\n     * @param  timeDelta  Number of seconds over which to calculate the accumulated funding amount.\\n     * @return            True if the funding rate is positive, and false otherwise.\\n     * @return            The funding amount as a unitless rate, represented as a fixed-point number\\n     *                    with 18 decimals.\\n     */\\n    function getFunding(\\n        uint256 timeDelta\\n    )\\n        external\\n        view\\n        returns (bool, uint256);\\n}\\n\",\"keccak256\":\"0x09fcc8fb1894efa2b75112ebc875aa0f4e5cb8da55044b2f9d3d813af6b9cd31\"},\"contracts/test/v1/Test_P1Funder.sol\":{\"content\":\"/*\\n\\n    Copyright 2024 Axor DAO\\n\\n    Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n    you may not use this file except in compliance with the License.\\n    You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n    Unless required by applicable law or agreed to in writing, software\\n    distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n    See the License for the specific language governing permissions and\\n    limitations under the License.\\n\\n*/\\n\\npragma solidity 0.5.16;\\npragma experimental ABIEncoderV2;\\n\\nimport { I_P1Funder } from \\\"../../protocol/v1/intf/I_P1Funder.sol\\\";\\n\\n\\n/**\\n * @title Test_P1Funder\\n * @author axor\\n *\\n * @notice I_P1Funder implementation for testing.\\n */\\n/* solium-disable-next-line camelcase */\\ncontract Test_P1Funder is\\n    I_P1Funder\\n{\\n    bool public _FUNDING_IS_POSITIVE_ = true;\\n    uint256 public _FUNDING_ = 0;\\n\\n    function getFunding(\\n        uint256 // timeDelta\\n    )\\n        external\\n        view\\n        returns (bool, uint256)\\n    {\\n        return (_FUNDING_IS_POSITIVE_, _FUNDING_);\\n    }\\n\\n    function setFunding(\\n        bool isPositive,\\n        uint256 newFunding\\n    )\\n        external\\n    {\\n        _FUNDING_IS_POSITIVE_ = isPositive;\\n        _FUNDING_ = newFunding;\\n    }\\n}\\n\",\"keccak256\":\"0xcfcbe412ba3a990abc9bec68680aeb272fff5ddc67549745f935b2f95713332e\"}},\"version\":1}",
+  "bytecode": "0x60806040526000805460ff1916600190811782555534801561002057600080fd5b5061022c806100306000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80634993cc3b14610051578063910fb0731461006f578063e41a054f14610084578063ebed4bd414610099575b600080fd5b6100596100ba565b60405161006691906101b3565b60405180910390f35b6100776100c0565b6040516100669190610183565b61009761009236600461010b565b6100c9565b005b6100ac6100a7366004610145565b6100e0565b604051610066929190610191565b60015481565b60005460ff1681565b6000805460ff191692151592909217909155600155565b5060005460015460ff90911691565b80356100fa816101c9565b92915050565b80356100fa816101e0565b6000806040838503121561011e57600080fd5b600061012a85856100ef565b925050602061013b85828601610100565b9150509250929050565b60006020828403121561015757600080fd5b60006101638484610100565b949350505050565b610174816101c1565b82525050565b610174816101c6565b602081016100fa828461016b565b6040810161019f828561016b565b6101ac602083018461017a565b9392505050565b602081016100fa828461017a565b151590565b90565b6101d2816101c1565b81146101dd57600080fd5b50565b6101d2816101c656fea365627a7a723158202ea78d43c1be0aef43e3c1e24b890a3a3563dadadb90bdefabed76eefbeb09c16c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80634993cc3b14610051578063910fb0731461006f578063e41a054f14610084578063ebed4bd414610099575b600080fd5b6100596100ba565b60405161006691906101b3565b60405180910390f35b6100776100c0565b6040516100669190610183565b61009761009236600461010b565b6100c9565b005b6100ac6100a7366004610145565b6100e0565b604051610066929190610191565b60015481565b60005460ff1681565b6000805460ff191692151592909217909155600155565b5060005460015460ff90911691565b80356100fa816101c9565b92915050565b80356100fa816101e0565b6000806040838503121561011e57600080fd5b600061012a85856100ef565b925050602061013b85828601610100565b9150509250929050565b60006020828403121561015757600080fd5b60006101638484610100565b949350505050565b610174816101c1565b82525050565b610174816101c6565b602081016100fa828461016b565b6040810161019f828561016b565b6101ac602083018461017a565b9392505050565b602081016100fa828461017a565b151590565b90565b6101d2816101c1565b81146101dd57600080fd5b50565b6101d2816101c656fea365627a7a723158202ea78d43c1be0aef43e3c1e24b890a3a3563dadadb90bdefabed76eefbeb09c16c6578706572696d656e74616cf564736f6c63430005100040",
+  "devdoc": {
+    "author": "axor",
+    "methods": {},
+    "title": "Test_P1Funder"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "I_P1Funder implementation for testing."
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8649,
+        "contract": "contracts/test/v1/Test_P1Funder.sol:Test_P1Funder",
+        "label": "_FUNDING_IS_POSITIVE_",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 8652,
+        "contract": "contracts/test/v1/Test_P1Funder.sol:Test_P1Funder",
+        "label": "_FUNDING_",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

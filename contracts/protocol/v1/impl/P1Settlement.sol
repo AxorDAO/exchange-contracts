@@ -122,11 +122,72 @@ contract P1Settlement is
     }
 
     /**
+     * @dev Calculates the funding change since the last update and stores it in the Global Index.
+     *
+     * @return Context struct that containing:
+     *         - The current oracle price;
+     *         - The global index;
+     *         - The minimum required collateralization.
+     */
+    function _loadContextWithPrice(uint256 price)
+        internal
+        returns (P1Types.Context memory)
+    {
+        // SLOAD old index
+        P1Types.Index memory index = _GLOBAL_INDEX_;
+
+        // get Price (P)
+        // uint256 price = I_P1Oracle(_ORACLE_).getPrice();
+
+        // get Funding (F)
+        uint256 timeDelta = block.timestamp.sub(index.timestamp);
+        if (timeDelta > 0) {
+            // turn the current index into a signed integer
+            SignedMath.Int memory signedIndex = SignedMath.Int({
+                value: index.value,
+                isPositive: index.isPositive
+            });
+
+            // Get the funding rate, applied over the time delta.
+            (
+                bool fundingPositive,
+                uint256 fundingValue
+            ) = I_P1Funder(_FUNDER_).getFunding(timeDelta);
+            fundingValue = fundingValue.baseMul(price);
+
+            // Update the index according to the funding rate, applied over the time delta.
+            if (fundingPositive) {
+                signedIndex = signedIndex.add(fundingValue);
+            } else {
+                signedIndex = signedIndex.sub(fundingValue);
+            }
+
+            // store new index
+            index = P1Types.Index({
+                timestamp: block.timestamp.toUint32(),
+                isPositive: signedIndex.isPositive,
+                value: signedIndex.value.toUint128()
+            });
+            _GLOBAL_INDEX_ = index;
+        }
+
+        emit LogIndex(index.toBytes32());
+
+        return P1Types.Context({
+            price: price,
+            minCollateral: _MIN_COLLATERAL_,
+            index: index
+        });
+    }
+
+    /**
      * @dev Settle the funding payments for a list of accounts and return their resulting balances.
      */
     function _settleAccounts(
         P1Types.Context memory context,
-        address[] memory accounts
+        address[] memory accounts,
+        uint256[] memory settlementAmounts,
+        bool[] memory settlementIsPositives
     )
         internal
         returns (P1Types.Balance[] memory)
@@ -135,7 +196,7 @@ contract P1Settlement is
         P1Types.Balance[] memory result = new P1Types.Balance[](numAccounts);
 
         for (uint256 i = 0; i < numAccounts; i++) {
-            result[i] = _settleAccount(context, accounts[i]);
+            result[i] = _settleAccount(context, accounts[i], settlementAmounts[i], settlementIsPositives[i]);
         }
 
         return result;
@@ -146,7 +207,9 @@ contract P1Settlement is
      */
     function _settleAccount(
         P1Types.Context memory context,
-        address account
+        address account,
+        uint256 settlementAmount,
+        bool settlementIsPositive
     )
         internal
         returns (P1Types.Balance memory)
@@ -168,6 +231,74 @@ contract P1Settlement is
             return balance;
         }
 
+        // // Get the difference between the newIndex and oldIndex.
+        // SignedMath.Int memory signedIndexDiff = SignedMath.Int({
+        //     isPositive: newIndex.isPositive,
+        //     value: newIndex.value
+        // });
+        // if (oldIndex.isPositive) {
+        //     signedIndexDiff = signedIndexDiff.sub(oldIndex.value);
+        // } else {
+        //     signedIndexDiff = signedIndexDiff.add(oldIndex.value);
+        // }
+
+        // By convention, positive funding (index increases) means longs pay shorts
+        // and negative funding (index decreases) means shorts pay longs.
+        // bool settlementIsPositive = signedIndexDiff.isPositive != balance.positionIsPositive;
+
+        // Settle the account balance by applying the index delta as a credit or debit.
+        // The interest amount scales with the position size.
+        //
+        // We round interest debits up and credits down to ensure that the contract won't become
+        // insolvent due to rounding errors.
+        // uint256 settlementAmount;
+        if (settlementIsPositive) {
+            // settlementAmount = signedIndexDiff.value.baseMul(balance.position);
+            balance.addToMargin(settlementAmount);
+        } else {
+            // settlementAmount = signedIndexDiff.value.baseMulRoundUp(balance.position);
+            balance.subFromMargin(settlementAmount);
+        }
+        _BALANCES_[account] = balance;
+
+        // Log the change to the account balance, which is the negative of the change in the index.
+        emit LogAccountSettled(
+            account,
+            settlementIsPositive,
+            settlementAmount,
+            balance.toBytes32()
+        );
+
+        return balance;
+    }
+
+        /**
+     * @dev Settle the funding payment for a single account and return its resulting balance.
+     */
+    function _settleAccountWhenUserForceWithdraw(
+        P1Types.Context memory context,
+        address account
+    )
+        internal
+        returns (P1Types.Balance memory, bool settlementIsPositive, uint256 settlementAmount)
+    {
+        P1Types.Index memory newIndex = context.index;
+        P1Types.Index memory oldIndex = _LOCAL_INDEXES_[account];
+        P1Types.Balance memory balance = _BALANCES_[account];
+
+        // Don't update the index if no time has passed.
+        if (oldIndex.timestamp == newIndex.timestamp) {
+            return (balance, false, 0);
+        }
+
+        // Store a cached copy of the index for this account.
+        _LOCAL_INDEXES_[account] = newIndex;
+
+        // No need for settlement if balance is zero.
+        if (balance.position == 0) {
+            return (balance, false, 0);
+        }
+
         // Get the difference between the newIndex and oldIndex.
         SignedMath.Int memory signedIndexDiff = SignedMath.Int({
             isPositive: newIndex.isPositive,
@@ -181,14 +312,14 @@ contract P1Settlement is
 
         // By convention, positive funding (index increases) means longs pay shorts
         // and negative funding (index decreases) means shorts pay longs.
-        bool settlementIsPositive = signedIndexDiff.isPositive != balance.positionIsPositive;
+        settlementIsPositive = signedIndexDiff.isPositive != balance.positionIsPositive;
 
         // Settle the account balance by applying the index delta as a credit or debit.
         // The interest amount scales with the position size.
         //
         // We round interest debits up and credits down to ensure that the contract won't become
         // insolvent due to rounding errors.
-        uint256 settlementAmount;
+        // settlementAmount;
         if (settlementIsPositive) {
             settlementAmount = signedIndexDiff.value.baseMul(balance.position);
             balance.addToMargin(settlementAmount);
@@ -206,7 +337,7 @@ contract P1Settlement is
             balance.toBytes32()
         );
 
-        return balance;
+        return (balance, settlementIsPositive, settlementAmount);
     }
 
     /**
